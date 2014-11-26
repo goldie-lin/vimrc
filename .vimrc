@@ -19,6 +19,7 @@ Plug 'godlygeek/tabular'
 Plug 'itchyny/lightline.vim'
 Plug 'tczengming/autoload_cscope.vim'
 Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 " Vim encoding
