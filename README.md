@@ -23,12 +23,18 @@ Required packages
     Ubuntu need to add a symlink `ack` linked to `ack-grep` package
     by `update-alternatives` command.
 
+    - for Ubuntu 12.04: (no man page file from [ack-grep 2.12 PPA](https://launchpad.net/~leonard-ehrenfried/+archive/ubuntu/ack2))
     ```bash
     sudo update-alternatives --install /usr/bin/ack ack /usr/bin/ack-grep 100
     ```
 
+    - for Ubuntu 14.04+:
+    ```bash
+    sudo update-alternatives --install /usr/bin/ack ack /usr/bin/ack-grep 100 --slave /usr/share/man/man1/ack.1p.gz ack.1p.gz /usr/share/man/man1/ack-grep.1p.gz
+    ```
+
     Moreover, `ack` must be newer than v2.0, so Ubuntu 12.04
-    need one more step to upgrade from v1.92.
+    need one more step to upgrade from v1.92 by adding [ack-grep 2.12 PPA](https://launchpad.net/~leonard-ehrenfried/+archive/ubuntu/ack2).
 
     ```bash
     sudo add-apt-repository ppa:leonard-ehrenfried/ack2
