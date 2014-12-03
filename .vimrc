@@ -160,12 +160,10 @@ let pyindent_open_paren="&sw*2"
 cmap w!! %!sudo tee > /dev/null %
 
 " always jump to the last cursor position when open file
-if has("autocmd")
-  autocmd! BufReadPost *
+autocmd! BufReadPost *
   \ if line("'\"") > 0 && line ("'\"") <= line("$") |
   \   exe "normal g'\"" |
   \ endif
-endif
 
 " ':Rpdf' to view PDF (required package 'pdftotext' (poppler-utils))
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
