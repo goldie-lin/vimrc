@@ -168,6 +168,12 @@ autocmd! BufReadPost *
 " ':Rpdf' to view PDF (required package 'pdftotext' (poppler-utils))
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 
+" ':DiffOrig' to see the diff between current buffer and file it was loaded from
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+    \ | wincmd p | diffthis
+endif
+
 " toggle mouse mode
 let s:MouseMode = "N"
 function! ToggleMouseMode()
