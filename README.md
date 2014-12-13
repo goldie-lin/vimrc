@@ -3,6 +3,8 @@ vimrc
 
 my ~/.vimrc
 
+Required Vim 7.3 (2010-08-15)+
+
 
 Vim addon manager
 -----------------
