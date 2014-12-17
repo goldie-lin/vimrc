@@ -8,18 +8,18 @@ endif
 " =============
 
 call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tczengming/autoload_cscope.vim'
+Plug 'mileszs/ack.vim'
+Plug 'godlygeek/tabular'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'airblade/vim-gitgutter'
 Plug 'kergoth/aftersyntaxc.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'plasticboy/vim-markdown'
 Plug 'goldie-lin/vim-dts'
 Plug 'thinca/vim-logcat'
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'godlygeek/tabular'
-Plug 'itchyny/lightline.vim'
-Plug 'tczengming/autoload_cscope.vim'
-Plug 'majutsushi/tagbar'
-Plug 'mileszs/ack.vim'
 call plug#end()
 
 " Vim encoding
