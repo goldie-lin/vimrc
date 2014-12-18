@@ -16,7 +16,7 @@ Required packages
 
 * `cscope` for [tczengming/autoload_cscope.vim](https://github.com/tczengming/autoload_cscope.vim).
 
-* `git` for [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter).
+* `git` for [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) and [tjennings/git-grep-vim](https://github.com/tjennings/git-grep-vim).
 
 * Android `adb` for [thinca/vim-logcat](https://github.com/thinca/vim-logcat).
 
