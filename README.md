@@ -22,6 +22,9 @@ Please check [256 colors in vim](http://vim.wikia.com/wiki/256_colors_in_vim) fo
 Required packages
 -----------------
 
+* `pdftotext` for `:Rpdf` custom command to view PDF file inside vim.
+  (Note that the executable is located in a not intuitive Ubuntu package name `poppler-utils`.)
+
 * `cscope` for [tczengming/autoload_cscope.vim](https://github.com/tczengming/autoload_cscope.vim).
 
 * `git` for [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) and [tjennings/git-grep-vim](https://github.com/tjennings/git-grep-vim).
