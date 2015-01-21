@@ -11,6 +11,14 @@ Vim addon manager
 [Vim-Plug](https://github.com/junegunn/vim-plug) used!
 
 
+256-colors terminal
+-------------------
+
+I enabled 256 colors in vim, so you should use it with a terminal supported 256 colors to get full effect.
+AFAIK, recent modern terminal emulators have already supported 256 colors, but not `rxvt-unicode` (URxvt) which can be replace with `rxvt-unicode-256color`.
+Please check [256 colors in vim](http://vim.wikia.com/wiki/256_colors_in_vim) for more details.
+
+
 Required packages
 -----------------
 
