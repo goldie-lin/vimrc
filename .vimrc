@@ -21,6 +21,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'plasticboy/vim-markdown'
 Plug 'goldie-lin/vim-dts'
 Plug 'thinca/vim-logcat'
+Plug 'Matt-Deacalion/vim-systemd-syntax'
 call plug#end()
 
 " Vim encoding
