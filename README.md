@@ -3,7 +3,7 @@ vimrc
 
 my ~/.vimrc
 
-Required Vim 7.3 (2010-08-15)+
+Note that my settings required Vim 7.3 (2010-08-15)+ to work.
 
 
 Vim addon manager
