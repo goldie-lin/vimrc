@@ -11,6 +11,12 @@ Vim addon manager
 
 [Vim-Plug](https://github.com/junegunn/vim-plug) used!
 
+* Install:
+
+  Download `plug.vim` and put it in `~/.vim/autoload`,
+  please see [Vim-Plug document](https://github.com/junegunn/vim-plug#usage) for more details.
+  Then, restart the Vim and type `:PlugInstall` to install all plugins specified in `.vimrc`.
+
 
 256-colors terminal
 -------------------
