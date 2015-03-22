@@ -8,6 +8,7 @@ Note that my settings required Vim 7.3 (2010-08-15)+ to work.
 
 Vim addon manager
 -----------------
+
 [Vim-Plug](https://github.com/junegunn/vim-plug) used!
 
 
