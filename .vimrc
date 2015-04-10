@@ -95,6 +95,9 @@ endif
 " Vim highlight color
 " ===================
 
+" change linenumber column color
+highlight LineNr ctermfg=DarkBlue ctermbg=Grey guifg=DarkBlue guibg=Grey
+
 " change hls color
 highlight Search term=reverse cterm=none ctermfg=DarkBlue ctermbg=Yellow gui=none guifg=wheat guibg=peru
 
