@@ -191,6 +191,23 @@ function! ToggleMouseMode()
   endif
 endfunction
 
+" toggle textwidth and colorcolumn
+let s:TWCC = "N"
+function! ToggleTWCC()
+  if exists('+colorcolumn')
+    "highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+    if s:TWCC == "Y"
+      set textwidth=0
+      set colorcolumn=
+      let s:TWCC = "N"
+    else
+      set textwidth=80  " (customizable)
+      set colorcolumn=+1  " highlight 'one' column after 'textwidth'
+      let s:TWCC = "Y"
+    endif
+  endif
+endfunction
+
 " Vim syntax
 " ==========
 
@@ -223,6 +240,9 @@ highlight SignColumn ctermbg=DarkGrey guibg=DarkGrey
 " toggle-and-show the 'paste' option
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+
+" toggle textwidth and colorcolumn (custom function)
+map <F3> :call ToggleTWCC()<CR>
 
 " toggle mouse mode (custom function)
 map <F4> :call ToggleMouseMode()<CR>
