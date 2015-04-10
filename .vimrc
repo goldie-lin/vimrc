@@ -212,6 +212,11 @@ highlight IndentGuidesEven ctermbg=darkgrey
 let g:vim_markdown_initial_foldlevel=1  " set initial foldlevel
 let g:vim_markdown_folding_disabled=1  " disable folding
 
+" (plugin) GitGutter
+let g:gitgutter_escape_grep = 1  " use raw grep, if you have 'grep' alias
+let g:gitgutter_override_sign_column_highlight = 0  " customise sign column's background color
+highlight SignColumn ctermbg=DarkGrey guibg=DarkGrey
+
 " Custom hotkey shortcuts
 " =======================
 
