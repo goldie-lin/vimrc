@@ -144,7 +144,7 @@ autocmd BufNewFile,BufRead *.rc  set filetype=sh
 " Ref: http://google-styleguide.googlecode.com/svn/trunk/google_python_style.vim
 setlocal indentexpr=GetGooglePythonIndent(v:lnum)
 let s:maxoff = 50 " maximum number of lines to look backwards.
-function GetGooglePythonIndent(lnum)
+function! GetGooglePythonIndent(lnum)
   call cursor(a:lnum, 1)
   let [par_line, par_col] = searchpairpos('(\|{\|\[', '', ')\|}\|\]', 'bW',
         \ "line('.') < " . (a:lnum - s:maxoff) . " ? dummy :"
