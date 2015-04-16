@@ -240,6 +240,10 @@ highlight SignColumn ctermbg=DarkGrey guibg=DarkGrey
 let g:autocscope_use_quickfix = 1
 let g:autocscope_use_location_instead = 1
 
+" (plugin) gtags
+"let Gtags_Result = "ctags-x"  " fallback
+let Gtags_Result = "ctags-mod"  " required GNU GLOBAL v6.0+
+
 " Custom hotkey shortcuts
 " =======================
 
