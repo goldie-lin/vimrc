@@ -234,6 +234,11 @@ let g:gitgutter_escape_grep = 1  " use raw grep, if you have 'grep' alias
 let g:gitgutter_override_sign_column_highlight = 0  " customise sign column's background color
 highlight SignColumn ctermbg=DarkGrey guibg=DarkGrey
 
+" (plugin) cscope
+" Note: FIXME: the location list is still very buggy on multiple tab pages.
+let g:autocscope_use_quickfix = 1
+let g:autocscope_use_location_instead = 1
+
 " Custom hotkey shortcuts
 " =======================
 
