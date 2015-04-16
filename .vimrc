@@ -266,6 +266,9 @@ nnoremap <F6> :set wrap!<CR>
 " (plugin) Tagbar
 nmap <F9> :TagbarToggle<CR>
 
+" (plugin) gtags
+noremap <C-\>] :GtagsCursor<CR>
+
 " Custom abbreviations
 " ====================
 
