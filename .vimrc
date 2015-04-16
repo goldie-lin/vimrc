@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'majutsushi/tagbar'
 Plug 'goldie-lin/autoload_cscope.vim'
+Plug 'goldie-lin/vim-gtags'
 Plug 'mileszs/ack.vim'
 Plug 'tjennings/git-grep-vim'
 Plug 'godlygeek/tabular'
