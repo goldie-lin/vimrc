@@ -238,7 +238,7 @@ highlight SignColumn ctermbg=DarkGrey guibg=DarkGrey
 " (plugin) cscope
 " Note: FIXME: the location list is still very buggy on multiple tab pages.
 let g:autocscope_use_quickfix = 1
-let g:autocscope_use_location_instead = 1
+let g:autocscope_use_location_instead = 0  " disabled, keep using quickfix list
 
 " (plugin) gtags
 "let g:Gtags_Result = "ctags-x"  " tag format (old, for fallback)
