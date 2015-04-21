@@ -246,7 +246,7 @@ let g:Gtags_Result = "ctags-mod"  " tag format (new, required GNU GLOBAL v6.0+)
 let g:Gtags_VerticalWindow = 0  " set to 1 will open windows vitically, otherwise horizontal
 let g:Gtags_Auto_Map = 0  " do not use suggested (built-in) key-mapping
 let g:Gtags_Auto_Update = 0  " do not keep tag files up-to-date automatically (slow down the file writting)
-let g:Gtags_No_Auto_Jump = 1  " jump to the first tag at the time of search
+let g:Gtags_No_Auto_Jump = 0  " jump to the first tag at the time of search (find definition more effective)
 
 " Custom hotkey shortcuts
 " =======================
