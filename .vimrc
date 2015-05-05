@@ -249,6 +249,19 @@ let g:Gtags_Auto_Map = 0  " do not use suggested (built-in) key-mapping
 let g:Gtags_Auto_Update = 0  " do not keep tag files up-to-date automatically (slow down the file writting)
 let g:Gtags_No_Auto_Jump = 0  " jump to the first tag at the time of search (find definition more effective)
 
+" (plugin) gtags-cscope
+set cscopeprg=gtags-cscope
+set cscopetag
+set cscopetagorder=0
+set cscopequickfix=s-,c-,d-,i-,t-,e-,g-  " you can open quickfix list manually by typing ':cw'
+let g:GtagsCscope_Auto_Load = 1  " auto load gtags for cscope database connection
+let g:GtagsCscope_Auto_Map = 0  " do not use the default (built-in) key/mouse mapping
+let g:GtagsCscope_Use_Old_Key_Map = 0  " do not use the old key/mouse mapping
+let g:GtagsCscope_Quiet = 1  " do not show error message when it failed to load gtags
+let g:GtagsCscope_Ignore_Case = 0  " do not ignore letter case when searching
+let g:GtagsCscope_Absolute_Path = 0  " do not use absolute path name
+let g:GtagsCscope_Keep_Alive = 0  " do not deterring interruption
+
 " Custom hotkey shortcuts
 " =======================
 
@@ -273,6 +286,18 @@ nmap <F9> :TagbarToggle<CR>
 
 " (plugin) gtags
 noremap <C-\><C-]> :GtagsCursor<CR>
+
+" (plugin) gtags-cscope
+:nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+:nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+:nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+:nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+:nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+:nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+:nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+:nmap <C-\><C-n> :cn<CR>
+:nmap <C-\><C-p> :cp<CR>
+:nmap <C-\><C-\><C-]> :cs find d <C-R>=expand("<cword>")<CR>:<C-R>=line('.')<CR>:%<CR>
 
 " Custom abbreviations
 " ====================
