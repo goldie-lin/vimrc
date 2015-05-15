@@ -164,6 +164,18 @@ endfunction
 let pyindent_nested_paren="&sw*2"
 let pyindent_open_paren="&sw*2"
 
+" ':Unix2Dos' and ':Dos2Unix' commands
+function! s:Unix2Dos()
+  update
+  edit ++ff=dos
+endfunction
+function! s:Dos2Unix()
+  call s:Unix2Dos()
+  setlocal ff=unix
+endfunction
+command! -nargs=0 Unix2Dos call s:Unix2Dos()
+command! -nargs=0 Dos2Unix call s:Dos2Unix()
+
 " ':w!!' to afterward sudo vim file if you forgot to 'sudo vim file'
 cmap w!! %!sudo tee > /dev/null %
 
