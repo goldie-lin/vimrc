@@ -197,6 +197,12 @@ if !exists(":DiffOrig")
     \ | wincmd p | diffthis
 endif
 
+" automatically analyze .sh files with 'shellcheck' utility, and put issues in quickfix window
+" Ref: http://jezenthomas.com/shell-script-static-analysis-in-vim/
+if executable("shellcheck") == 1
+  autocmd BufWritePost *.sh set makeprg=shellcheck\ -f\ gcc\ % | :silent make | redraw!
+endif
+
 " toggle mouse mode
 let s:MouseMode = "N"
 function! ToggleMouseMode()
