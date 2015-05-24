@@ -203,7 +203,7 @@ if executable("shellcheck") == 1
   autocmd BufWritePost *.sh set makeprg=shellcheck\ -f\ gcc\ % | :silent make | redraw!
 endif
 
-" automatically open quickfix window if found any issue
+" automatically open quickfix/location window if found any issue
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
