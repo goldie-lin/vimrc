@@ -21,6 +21,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
 Plug 'chrisbra/vim-diff-enhanced'
 Plug 'kergoth/aftersyntaxc.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -281,6 +282,20 @@ let g:GtagsCscope_Quiet = 1  " do not show error message when it failed to load 
 let g:GtagsCscope_Ignore_Case = 0  " do not ignore letter case when searching
 let g:GtagsCscope_Absolute_Path = 0  " do not use absolute path name
 let g:GtagsCscope_Keep_Alive = 0  " do not deterring interruption
+
+" (plugin) syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1  " always stick any detected errors into location list
+let g:syntastic_auto_loc_list = 1  " automatically open and close location list when issue detected and cleaned
+let g:syntastic_check_on_open = 1  " check when open file
+let g:syntastic_check_on_wq = 0  " do not check when you typed :wq, :x, and :ZZ
+let g:syntastic_auto_jump = 0  " do not automatically jump to the first detected issue
+let g:syntastic_aggregate_errors = 1  " apply all checkers and aggregate all errors found
+" check setting for filetype 'sh':
+let g:syntastic_sh_checkers = [ "bashate", "shellcheck", "sh" ]
+let g:syntastic_sh_bashate_post_args = "-i E003"  " ignore strict 4 spaces indent
 
 " Custom hotkey shortcuts
 " =======================
