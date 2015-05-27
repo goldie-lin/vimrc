@@ -329,6 +329,11 @@ let g:syntastic_aggregate_errors = 1  " apply all checkers and aggregate all err
 " check setting for filetype 'sh':
 let g:syntastic_sh_checkers = [ "bashate", "shellcheck", "sh" ]
 let g:syntastic_sh_bashate_post_args = "-i E003"  " ignore strict 4 spaces indent
+" check setting for filetype 'c':
+let g:syntastic_c_checkers = [ "splint", "gcc" ]
+let g:syntastic_c_check_header = 1
+let g:syntastic_c_auto_refresh_includes = 1
+let g:syntastic_c_remove_include_errors = 1
 
 " Custom hotkey shortcuts
 " =======================
