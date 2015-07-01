@@ -29,6 +29,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'goldie-lin/vim-dts'
 Plug 'thinca/vim-logcat'
 Plug 'Matt-Deacalion/vim-systemd-syntax'
+Plug 'tmux-plugins/vim-tmux'
 call plug#end()
 
 " Vim encoding
