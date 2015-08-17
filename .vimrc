@@ -30,6 +30,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'goldie-lin/vim-dts'
 Plug 'thinca/vim-logcat'
 Plug 'Matt-Deacalion/vim-systemd-syntax'
+Plug 'TluxGhelew/vim-vimperator'
 Plug 'tmux-plugins/vim-tmux'
 call plug#end()
 
