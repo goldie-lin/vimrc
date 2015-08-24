@@ -69,7 +69,7 @@ set laststatus=2  " Fix for (plugin) Lightline (MUST before color scheme setting
 
 set autoindent  " [ai] Enable autoindent
 set copyindent  " [ci] Copy previous line indentation on autoindent
-"set smartindent  " [si] Enable smartindent
+set smartindent  " [si] Enable smartindent
 
 "set expandtab  " [et] Replace tab with spaces automatically
 "set shiftwidth=4  " [sw] Set indent width is equal to 4 space chars
