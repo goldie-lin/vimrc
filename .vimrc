@@ -28,6 +28,7 @@ Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-tbone'
+Plug 'wincent/terminus'
 Plug 'scrooloose/syntastic'
 Plug 'chrisbra/vim-diff-enhanced'
 Plug 'kergoth/aftersyntaxc.vim'
@@ -343,6 +344,11 @@ let g:syntastic_c_checkers = [ "splint", "gcc" ]
 let g:syntastic_c_check_header = 1
 let g:syntastic_c_auto_refresh_includes = 1
 let g:syntastic_c_remove_include_errors = 1
+
+" (plugin) terminus
+" disable TerminusFocusReporting to prevent trigger the :checktime command
+" that will interfere tmux highlighting the window activity in status line.
+let g:TerminusFocusReporting = 0
 
 " Custom hotkey shortcuts
 " =======================
