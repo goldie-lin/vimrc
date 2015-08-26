@@ -31,6 +31,7 @@ Plug 'tpope/vim-tbone'
 Plug 'wincent/terminus'
 Plug 'scrooloose/syntastic'
 Plug 'chrisbra/vim-diff-enhanced'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'kergoth/aftersyntaxc.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'plasticboy/vim-markdown'
