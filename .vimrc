@@ -210,6 +210,10 @@ if !exists(":DiffOrig")
     \ | wincmd p | diffthis
 endif
 
+" If doing a diff. Upon writing changes to file, automatically update the differences
+" Ref: http://vim.wikia.com/wiki/Update_the_diff_view_automatically
+autocmd BufWritePost * if &diff == 1 | diffupdate | endif
+
 " automatically open quickfix/location window if found any issue
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
