@@ -381,16 +381,16 @@ nmap <F9> :TagbarToggle<CR>
 noremap <C-\><C-]> :GtagsCursor<CR>
 
 " (plugin) gtags-cscope
-:nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-:nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-:nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-:nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-:nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-:nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-:nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
-:nmap <C-\><C-n> :cn<CR>
-:nmap <C-\><C-p> :cp<CR>
-:nmap <C-\><C-\><C-]> :cs find d <C-R>=expand("<cword>")<CR>:<C-R>=line('.')<CR>:%<CR>
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\><C-n> :cn<CR>
+nmap <C-\><C-p> :cp<CR>
+nmap <C-\><C-\><C-]> :cs find d <C-R>=expand("<cword>")<CR>:<C-R>=line('.')<CR>:%<CR>
 
 " Custom abbreviations
 " ====================
