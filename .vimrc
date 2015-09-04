@@ -345,10 +345,14 @@ let g:syntastic_aggregate_errors = 1  " apply all checkers and aggregate all err
 let g:syntastic_sh_checkers = [ "bashate", "shellcheck", "sh" ]
 let g:syntastic_sh_bashate_post_args = "-i E003"  " ignore strict 4 spaces indent
 " check setting for filetype 'c':
-let g:syntastic_c_checkers = [ "splint", "gcc" ]
+let g:syntastic_c_checkers = [ "sparse", "gcc" ]
 let g:syntastic_c_check_header = 1
 let g:syntastic_c_auto_refresh_includes = 1
 let g:syntastic_c_remove_include_errors = 1
+let g:syntastic_c_sparse_post_args = "-gcc-base-dir " .
+    \ system("gcc -v 2>&1 | sed -n '/^Reading specs/ { s#.* /#/#; s#/[^/]*$##; p; }'")
+let g:syntastic_splint_config_file = ".syntastic_c_config"
+let g:syntastic_sparse_config_file = ".syntastic_c_config"
 
 " (plugin) terminus
 " disable TerminusFocusReporting to prevent trigger the :checktime command
