@@ -374,6 +374,11 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
+" keep jump to previous and next cursor positions appear in the middle of the screen too
+" Ref: http://stackoverflow.com/questions/2372584/auto-zz-in-vim-after-a-jump/2373510#2373510
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
+
 " toggle-and-show the 'paste' option
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
