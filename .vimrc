@@ -57,6 +57,7 @@ syntax on  " Enable syntax highlighting
 set nobackup  " [nobk] Do not make a backup file
 set visualbell  " [vb] Error bells are displayed visually (flash screen)
 set virtualedit=block  " [ve] Allow moving cursor outside the actual text in visual block mode
+set splitbelow  " [sb] Split a window will put the new window below the current one
 set hlsearch  " [hls] Highlight search
 set incsearch  " [is] Search as you type instantly
 set ignorecase  " [ic] Ignore case when search
