@@ -85,12 +85,7 @@ set smartindent  " [si] Enable smartindent
 " If (expandtab is set), always use appropriate number of spaces.
 "set softtabstop=4
 
-" [bs] Backspace works in insert mode, e.g., not inserting a ^?, but won't
-" delete over line breaks, or automatically-inserted indentation, or the place
-" where insert mode started.
-"   '0' is same as 'set backspace=' (Vi compatible)
-"   '1' is same as 'set backspace=indent,eol'
-"   '2' is same as 'set backspace=indent,eol,start'
+" [bs] Backspace works in insert mode, see ":h 'backspace'" for detail.
 set backspace=indent,eol,start
 
 set wildmenu  " [wmnu] Show wildmenu during tab auto-completion
