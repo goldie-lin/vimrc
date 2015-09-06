@@ -365,6 +365,15 @@ let g:visualstar_extra_commands = "zzzv"  " keep search results appear in the mi
 " Custom hotkey shortcuts
 " =======================
 
+" keep search results appear in the middle of the screen
+" Ref: http://vim.wikia.com/wiki/Make_search_results_appear_in_the_middle_of_the_screen#Simple_mappings
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
+
 " toggle-and-show the 'paste' option
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
