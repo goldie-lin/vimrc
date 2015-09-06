@@ -379,6 +379,10 @@ nnoremap g# g#zz
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
 
+" keep the cursor in place while joining lines with J
+" Ref: http://blog.sanctum.geek.nz/vim-annoyances/
+nnoremap J mzJ`z
+
 " toggle-and-show the 'paste' option
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
