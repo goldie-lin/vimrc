@@ -91,7 +91,7 @@ set smartindent  " [si] Enable smartindent
 "   '0' is same as 'set backspace=' (Vi compatible)
 "   '1' is same as 'set backspace=indent,eol'
 "   '2' is same as 'set backspace=indent,eol,start'
-set backspace=2
+set backspace=indent,eol,start
 
 set wildmenu  " [wmnu] Show wildmenu during tab auto-completion
 " [wim] Enable command line tab auto-completioni
