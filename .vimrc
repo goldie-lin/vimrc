@@ -383,6 +383,9 @@ nnoremap <C-i> <C-i>zz
 " Ref: http://blog.sanctum.geek.nz/vim-annoyances/
 nnoremap J mzJ`z
 
+" disable Q for Ex-mode that I never use
+nnoremap Q <Nop>
+
 " toggle-and-show the 'paste' option
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
