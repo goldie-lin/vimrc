@@ -360,6 +360,9 @@ let g:syntastic_sparse_config_file = ".syntastic_c_config"
 " that will interfere tmux highlighting the window activity in status line.
 let g:TerminusFocusReporting = 0
 
+" (plugin) visualstar
+let g:visualstar_extra_commands = "zzzv"  " keep search results appear in the middle of the screen
+
 " Custom hotkey shortcuts
 " =======================
 
