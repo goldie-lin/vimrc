@@ -77,6 +77,7 @@ set copyindent  " [ci] Copy previous line indentation on autoindent
 set smartindent  " [si] Enable smartindent
 
 "set expandtab  " [et] Replace tab with spaces automatically
+"set smarttab  " [sta] Tab in front of a line inserts blanks according to shiftwidth.
 "set shiftwidth=4  " [sw] Set indent width is equal to 4 space chars
 "set tabstop=4  " [ts] Set tab width is equal to 4 space chars, affect existing text displays
 " [sts] Set softtab width is equal to 4 space chars, affect hitting tab in insert mode
