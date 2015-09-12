@@ -68,7 +68,7 @@ set showmatch  " [sm] Show (flash) match `([{' after input `([{', beep if not fo
 set showcmd  " [sc] Show incomplete command in the lower right corner
 set ruler  " [ru] Show coordinates of mouse cursor always
 set list  " See the difference between tabs and spaces and trailing blanks
-set tabpagemax=24  " [tpm] Max number of tab pages (default 10)
+set tabpagemax=24  " [tpm] Max number of tab pages (default: 10)
 "set noendofline binary  " [noeol] Save a file without terminator after last line
 set laststatus=2  " Fix for (plugin) Lightline (MUST before color scheme setting)
 
@@ -302,7 +302,7 @@ highlight SignColumn ctermbg=DarkGrey guibg=DarkGrey
 
 " (plugin) Tagbar
 let g:tagbar_compact = 1  " omit short help at the top
-let g:tagbar_width = 30  " default 40
+let g:tagbar_width = 30  " default: 40
 let g:tagbar_indent = 1  " default: 2
 
 " (plugin) cscope
