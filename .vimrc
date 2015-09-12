@@ -430,6 +430,14 @@ nmap <C-\><C-n> :cn<CR>
 nmap <C-\><C-p> :cp<CR>
 nmap <C-\><C-\><C-]> :cs find d <C-R>=expand("<cword>")<CR>:<C-R>=line('.')<CR>:%<CR>
 
+" (plugin) vim-tmux-navigator
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-b><C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-b><C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-b><C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-b><C-l> :TmuxNavigateRight<CR>
+nnoremap <silent> <C-b><C-\> :TmuxNavigatePrevious<CR>
+
 " Custom abbreviations
 " ====================
 
