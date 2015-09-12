@@ -363,6 +363,10 @@ let g:TerminusFocusReporting = 0
 " (plugin) visualstar
 let g:visualstar_extra_commands = "zzzv"  " keep search results appear in the middle of the screen
 
+" (plugin) EasyAlign
+" start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
+
 " Custom hotkey shortcuts
 " =======================
 
