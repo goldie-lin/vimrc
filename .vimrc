@@ -370,6 +370,9 @@ let g:visualstar_extra_commands = "zzzv"  " keep search results appear in the mi
 " start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
 
+" (plugin) indentLine
+let g:indentLine_char = '┆'
+
 " Custom hotkey shortcuts
 " =======================
 
