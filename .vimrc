@@ -118,6 +118,7 @@ endif
 
 " change linenumber column color
 highlight LineNr ctermfg=DarkBlue ctermbg=Grey guifg=DarkBlue guibg=Grey
+highlight CursorLineNr ctermfg=Black ctermbg=Grey guifg=Black guibg=Grey
 
 " change hls color
 highlight Search term=reverse cterm=none ctermfg=DarkBlue ctermbg=Yellow gui=none guifg=wheat guibg=peru
