@@ -360,6 +360,7 @@ let g:syntastic_splint_config_file = ".syntastic_c_config"
 let g:syntastic_sparse_config_file = ".syntastic_c_config"
 " check setting for filetype 'python':
 let g:syntastic_python_flake8_post_args = "--ignore E111,E114"  " ignore strict 4 spaces indent
+let g:syntastic_python_pylint_post_args = "--disable=bad-indentation"  " ignore strict 4 spaces indent
 
 " (plugin) terminus
 " disable TerminusFocusReporting to prevent trigger the :checktime command
