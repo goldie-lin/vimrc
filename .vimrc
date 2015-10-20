@@ -33,6 +33,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'wincent/terminus'
 Plug 'scrooloose/syntastic'
 Plug 'chrisbra/vim-diff-enhanced'
+Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'kergoth/aftersyntaxc.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
