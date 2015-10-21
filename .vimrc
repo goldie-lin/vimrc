@@ -149,6 +149,7 @@ filetype plugin on  " enable filetype-specific plugins
 " custom filetype remaps
 autocmd BufNewFile,BufRead *.jsm set filetype=javascript
 autocmd BufNewFile,BufRead *.rc  set filetype=sh
+autocmd BufNewFile,BufRead *.aidl set filetype=java
 
 " Custom functions/scripts
 " ========================
