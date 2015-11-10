@@ -227,6 +227,9 @@ autocmd BufWritePost * if &diff == 1 | diffupdate | endif
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
+" automatically spell check
+autocmd FileType gitcommit setlocal spell
+
 " toggle mouse mode
 let s:MouseMode = "N"
 function! ToggleMouseMode()
