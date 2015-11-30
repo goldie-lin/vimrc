@@ -231,14 +231,11 @@ autocmd QuickFixCmdPost    l* nested lwindow
 autocmd FileType gitcommit setlocal spell
 
 " toggle mouse mode
-let s:MouseMode = "N"
 function! ToggleMouseMode()
-  if s:MouseMode == "Y"
-    set mouse=
-    let s:MouseMode = "N"
-  else
+  if empty(&mouse)
     set mouse=a
-    let s:MouseMode = "Y"
+  else
+    set mouse=
   endif
 endfunction
 
