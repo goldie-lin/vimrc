@@ -429,10 +429,10 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 " toggle textwidth and colorcolumn (custom function)
-map <F3> :call ToggleTWCC()<CR>
+nnoremap <F3> :call ToggleTWCC()<CR>
 
 " toggle mouse mode (custom function)
-map <F4> :call ToggleMouseMode()<CR>
+nnoremap <F4> :call ToggleMouseMode()<CR>
 
 " toggle the 'linenumber' option
 nnoremap <F5> :call ToggleLineNumber()<CR>
