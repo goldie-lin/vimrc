@@ -239,6 +239,18 @@ function! ToggleMouseMode()
   endif
 endfunction
 
+" toggle linenumber
+function! ToggleLineNumber()
+  if !&number && !&relativenumber
+    set number
+  elseif !&relativenumber
+    set relativenumber
+  else
+    set nonumber
+    set norelativenumber
+  endif
+endfunction
+
 " toggle textwidth and colorcolumn
 let s:TWCC = "N"
 function! ToggleTWCC()
@@ -423,7 +435,7 @@ map <F3> :call ToggleTWCC()<CR>
 map <F4> :call ToggleMouseMode()<CR>
 
 " toggle the 'linenumber' option
-nnoremap <F5> :set number!<CR>
+nnoremap <F5> :call ToggleLineNumber()<CR>
 
 " toggle the 'linewrap' option
 nnoremap <F6> :set wrap!<CR>
