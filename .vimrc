@@ -434,7 +434,7 @@ nnoremap <F3> :call ToggleTWCC()<CR>
 " toggle mouse mode (custom function)
 nnoremap <F4> :call ToggleMouseMode()<CR>
 
-" toggle the 'linenumber' option
+" toggle line number (custom function)
 nnoremap <F5> :call ToggleLineNumber()<CR>
 
 " toggle the 'linewrap' option
