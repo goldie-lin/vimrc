@@ -321,6 +321,18 @@ let g:vim_markdown_folding_disabled=1  " disable folding
 " (plugin) Ag
 let g:ag_highlight = 1  " highlight the search terms after searching
 
+" (plugin) Grepper
+let g:grepper = {
+  \ 'dispatch':  1,
+  \ 'quickfix':  1,
+  \ 'open':      1,
+  \ 'switch':    1,
+  \ 'jump':      0,
+  \ 'cword':     0,
+  \ 'next_tool': '<Tab>',
+  \ 'tools':     ['git', 'ag', 'grep'],
+  \ }
+
 " (plugin) GitGutter
 let g:gitgutter_escape_grep = 1  " use raw grep, if you have 'grep' alias
 let g:gitgutter_override_sign_column_highlight = 0  " customise sign column's background color
