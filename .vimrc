@@ -130,10 +130,10 @@ highlight ColorColumn ctermbg=DarkGrey guibg=DarkGrey
 highlight Search term=reverse cterm=none ctermfg=DarkBlue ctermbg=Yellow gui=none guifg=wheat guibg=peru
 
 " change vimdiff highlight color
-highlight DiffAdd    term=reverse cterm=bold ctermfg=White   ctermbg=DarkGreen gui=bold guifg=bg  guibg=Green
-highlight DiffDelete term=reverse cterm=none ctermfg=Black   ctermbg=Red       gui=none guifg=bg  guibg=Red
-highlight DiffChange term=reverse cterm=none ctermfg=Black   ctermbg=LightBlue gui=none guifg=bg  guibg=LightBlue
-highlight DiffText   term=reverse cterm=none ctermfg=DarkRed ctermbg=Blue      gui=none guifg=Red guibg=Gray
+highlight DiffAdd    term=reverse cterm=bold ctermfg=White     ctermbg=DarkGreen gui=bold guifg=White     guibg=DarkGreen
+highlight DiffDelete term=reverse cterm=none ctermfg=Black     ctermbg=DarkGrey  gui=none guifg=Black     guibg=DarkGrey
+highlight DiffChange term=reverse cterm=bold ctermfg=LightGrey ctermbg=DarkBlue  gui=bold guifg=LightGrey guibg=DarkBlue
+highlight DiffText   term=reverse cterm=bold ctermfg=Red       ctermbg=Blue      gui=bold guifg=Red       guibg=Blue
 
 " highlight trailing whitespaces
 highlight ExtraWhitespace ctermbg=darkred guibg=darkcyan
