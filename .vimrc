@@ -60,7 +60,7 @@ set fileencodings=ucs-bom,utf-8,default,big5,gb2312,gbk,latin1
 
 syntax on  " Enable syntax highlighting
 set nobackup  " [nobk] Do not make a backup file
-set visualbell  " [vb] Error bells are displayed visually (flash screen)
+"set visualbell  " [vb] Error bells are displayed visually (flash screen)
 set virtualedit=block  " [ve] Allow moving cursor outside the actual text in visual block mode
 set splitbelow  " [sb] Split a window will put the new window below the current one
 set splitright  " [spr] Split a window will put the new window right of the current one
