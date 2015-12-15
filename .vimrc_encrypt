@@ -3,5 +3,5 @@ source ~/.vimrc
 set nobackup
 set noswapfile
 set nowritebackup
-set cm=blowfish  " Required Vim 7.3 (2010-08-15)+
-"set cm=blowfish2 " Requires Vim 7.4.399+
+"set cm=blowfish  " Required Vim 7.3 (2010-08-15)+
+set cm=blowfish2 " Requires Vim 7.4.399+
