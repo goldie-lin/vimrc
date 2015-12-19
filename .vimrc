@@ -457,6 +457,13 @@ nnoremap <F6> :set wrap!<CR>
 " (plugin) Tagbar
 nmap <F7> :TagbarToggle<CR>
 
+" (plugin) syntastic
+nnoremap <F8> :SyntasticToggleMode\|SyntasticReset<CR>
+nnoremap <F9> :SyntasticCheck gcc<CR>
+nnoremap <F10> :SyntasticCheck cppcheck<CR>
+nnoremap <F11> :SyntasticCheck checkpatch<CR>
+nnoremap <F12> :SyntasticCheck javac<CR>
+
 " (plugin) Grepper
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
