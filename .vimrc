@@ -255,7 +255,6 @@ endfunction
 let s:TWCC = "N"
 function! ToggleTWCC()
   if exists('+colorcolumn')
-    "highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
     if s:TWCC == "Y"
       set textwidth=0
       set colorcolumn=
