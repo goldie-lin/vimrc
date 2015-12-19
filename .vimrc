@@ -10,7 +10,6 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'majutsushi/tagbar'
-"Plug 'goldie-lin/autoload_cscope.vim'
 Plug 'goldie-lin/vim-gtags'
 Plug 'goldie-lin/vim-gtags-cscope'
 Plug 'thinca/vim-visualstar'
