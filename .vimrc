@@ -454,15 +454,15 @@ nnoremap <F5> :call ToggleLineNumber()<CR>
 " toggle the 'linewrap' option
 nnoremap <F6> :set wrap!<CR>
 
+" (plugin) Tagbar
+nmap <F7> :TagbarToggle<CR>
+
 " (plugin) Grepper
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 nnoremap <Leader>g :Grepper! -tool git<CR>
 nnoremap <Leader>G :Grepper! -tool ag<CR>
 nnoremap <Leader>* :Grepper! -cword!<CR>
-
-" (plugin) Tagbar
-nmap <F9> :TagbarToggle<CR>
 
 " (plugin) gtags
 noremap <C-\><C-]> :GtagsCursor<CR>
