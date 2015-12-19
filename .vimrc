@@ -378,7 +378,7 @@ let g:syntastic_sh_checkers = [ "bashate", "shellcheck", "sh" ]
 let g:syntastic_sh_bashate_post_args = "-i E003"  " ignore strict 4 spaces indent
 let g:syntastic_sh_shellcheck_post_args = "-e SC1091"  " ignore sourcing external files
 " check setting for filetype 'c':
-let g:syntastic_c_checkers = [ "sparse", "gcc" ]
+let g:syntastic_c_checkers = [ "sparse", "gcc", "cppcheck" ]
 let g:syntastic_c_check_header = 1
 let g:syntastic_c_auto_refresh_includes = 1
 let g:syntastic_c_remove_include_errors = 1
