@@ -277,10 +277,6 @@ autocmd BufRead,BufNewFile *.dts,*.dtsi set filetype=dts
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 
-" (syntax) Indent Guides, for `set background=dark` is used for terminal vim
-highlight IndentGuidesOdd  ctermbg=black
-highlight IndentGuidesEven ctermbg=darkgrey
-
 " Vim plugin
 " ==========
 
