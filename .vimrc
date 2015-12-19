@@ -135,7 +135,7 @@ highlight DiffChange term=reverse cterm=bold ctermfg=LightGrey ctermbg=DarkBlue 
 highlight DiffText   term=reverse cterm=bold ctermfg=Red       ctermbg=Blue      gui=bold guifg=Red       guibg=Blue
 
 " highlight trailing whitespaces
-highlight ExtraWhitespace ctermbg=darkred guibg=darkcyan
+highlight ExtraWhitespace ctermbg=DarkRed guibg=DarkCyan
 autocmd BufEnter * if &ft != 'help' | match ExtraWhitespace /\s\+$/ | endif
 autocmd BufEnter * if &ft == 'help' | match none /\s\+$/ | endif
 
