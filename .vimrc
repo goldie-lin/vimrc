@@ -349,6 +349,7 @@ let g:Gtags_VerticalWindow = 0  " set to 1 will open windows vitically, otherwis
 let g:Gtags_Auto_Map = 0  " do not use suggested (built-in) key-mapping
 let g:Gtags_Auto_Update = 0  " do not keep tag files up-to-date automatically (slow down the file writting)
 let g:Gtags_No_Auto_Jump = 0  " jump to the first tag at the time of search (find definition more effective)
+let g:Gtags_Close_When_Single = 1  " close quickfix windows in case of single tag
 
 " (plugin) gtags-cscope
 set cscopeprg=gtags-cscope
