@@ -330,11 +330,6 @@ let g:grepper = {
   \ 'tools':     ['git', 'ag', 'grep'],
   \ }
 
-" (plugin) GitGutter
-let g:gitgutter_escape_grep = 1  " use raw grep, if you have 'grep' alias
-let g:gitgutter_override_sign_column_highlight = 0  " customise sign column's background color
-highlight SignColumn ctermbg=DarkGrey guibg=DarkGrey
-
 " (plugin) Tagbar
 let g:tagbar_compact = 1  " omit short help at the top
 let g:tagbar_width = 30  " default: 40
