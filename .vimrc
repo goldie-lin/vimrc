@@ -496,4 +496,10 @@ nnoremap <silent> <C-b><C-\> :TmuxNavigatePrevious<CR>
 " Custom abbreviations
 " ====================
 
-:ab asap as soon as possible
+iabbrev asap       as soon as possible
+iabbrev beacuse    because
+iabbrev becuase    because
+iabbrev defualt    default
+iabbrev Defualt    Default
+iabbrev emial      email
+iabbrev Emial      Email
