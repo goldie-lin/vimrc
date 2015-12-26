@@ -320,7 +320,6 @@ let g:ag_highlight = 1  " highlight the search terms after searching
 
 " (plugin) Grepper
 let g:grepper = {
-  \ 'dispatch':  1,
   \ 'quickfix':  1,
   \ 'open':      1,
   \ 'switch':    1,
