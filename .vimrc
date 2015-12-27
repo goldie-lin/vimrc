@@ -126,20 +126,20 @@ endif
 " ===================
 
 " change linenumber column color
-highlight LineNr ctermfg=DarkBlue ctermbg=Grey guifg=DarkBlue guibg=Grey
-highlight CursorLineNr ctermfg=Black ctermbg=Grey guifg=Black guibg=Grey
+"highlight LineNr ctermfg=DarkBlue ctermbg=Grey guifg=DarkBlue guibg=Grey
+"highlight CursorLineNr ctermfg=Black ctermbg=Grey guifg=Black guibg=Grey
 
 " change colorcolumn column color for one column after textwidth
-highlight ColorColumn ctermbg=DarkGrey guibg=DarkGrey
+"highlight ColorColumn ctermbg=DarkGrey guibg=DarkGrey
 
 " change hls color
-highlight Search term=reverse cterm=none ctermfg=DarkBlue ctermbg=Yellow gui=none guifg=wheat guibg=peru
+"highlight Search term=reverse cterm=none ctermfg=DarkBlue ctermbg=Yellow gui=none guifg=wheat guibg=peru
 
 " change vimdiff highlight color
-highlight DiffAdd    term=reverse cterm=bold ctermfg=White     ctermbg=DarkGreen gui=bold guifg=White     guibg=DarkGreen
-highlight DiffDelete term=reverse cterm=none ctermfg=Black     ctermbg=DarkGrey  gui=none guifg=Black     guibg=DarkGrey
-highlight DiffChange term=reverse cterm=bold ctermfg=LightGrey ctermbg=DarkBlue  gui=bold guifg=LightGrey guibg=DarkBlue
-highlight DiffText   term=reverse cterm=bold ctermfg=Red       ctermbg=Blue      gui=bold guifg=Red       guibg=Blue
+"highlight DiffAdd    term=reverse cterm=bold ctermfg=White     ctermbg=DarkGreen gui=bold guifg=White     guibg=DarkGreen
+"highlight DiffDelete term=reverse cterm=none ctermfg=Black     ctermbg=DarkGrey  gui=none guifg=Black     guibg=DarkGrey
+"highlight DiffChange term=reverse cterm=bold ctermfg=LightGrey ctermbg=DarkBlue  gui=bold guifg=LightGrey guibg=DarkBlue
+"highlight DiffText   term=reverse cterm=bold ctermfg=Red       ctermbg=Blue      gui=bold guifg=Red       guibg=Blue
 
 " highlight trailing whitespaces
 highlight ExtraWhitespace ctermbg=DarkRed guibg=DarkCyan
