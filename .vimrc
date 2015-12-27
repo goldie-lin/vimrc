@@ -8,6 +8,7 @@ endif
 " =============
 
 call plug#begin('~/.vim/plugged')
+Plug 'tomasr/molokai'
 Plug 'itchyny/lightline.vim'
 Plug 'majutsushi/tagbar'
 Plug 'goldie-lin/vim-gtags'
