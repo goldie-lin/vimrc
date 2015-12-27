@@ -329,6 +329,10 @@ let g:grepper = {
   \ 'tools':     ['git', 'ag', 'grep'],
   \ }
 
+" (plugin) signify
+let g:signify_vcs_list = [ 'git' ]
+let g:signify_update_on_focusgained = 1
+
 " (plugin) Tagbar
 let g:tagbar_compact = 1  " omit short help at the top
 let g:tagbar_width = 30  " default: 40
