@@ -420,12 +420,12 @@ let g:indentLine_char = '┆'
 
 " keep search results appear in the middle of the screen
 " Ref: http://vim.wikia.com/wiki/Make_search_results_appear_in_the_middle_of_the_screen#Simple_mappings
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
-nnoremap g* g*zz
-nnoremap g# g#zz
+"nnoremap n nzz
+"nnoremap N Nzz
+"nnoremap * *zz
+"nnoremap # #zz
+"nnoremap g* g*zz
+"nnoremap g# g#zz
 
 " keep jump to previous and next cursor positions appear in the middle of the screen too
 " Ref: http://stackoverflow.com/questions/2372584/auto-zz-in-vim-after-a-jump/2373510#2373510
