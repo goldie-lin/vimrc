@@ -320,9 +320,6 @@ let g:lightline = {
 let g:vim_markdown_initial_foldlevel=1  " set initial foldlevel
 let g:vim_markdown_folding_disabled=1  " disable folding
 
-" (plugin) Ag
-let g:ag_highlight = 1  " highlight the search terms after searching
-
 " (plugin) Grepper
 let g:grepper = {
   \ 'quickfix':  1,
