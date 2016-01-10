@@ -473,6 +473,19 @@ nnoremap <F10> :SyntasticCheck cppcheck<CR>
 nnoremap <F11> :SyntasticCheck checkpatch<CR>
 nnoremap <F12> :SyntasticCheck javac<CR>
 
+" (plugin) incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+let g:incsearch#separate_highlight = 1
+
 " (plugin) Grepper
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
