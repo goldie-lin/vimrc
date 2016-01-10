@@ -82,6 +82,7 @@ set number  " [nu] Show line number in front of each line.
 set tabpagemax=24  " [tpm] Max number of tab pages (default: 10)
 "set noendofline binary  " [noeol] Save a file without terminator after last line
 set laststatus=2  " Fix for (plugin) Lightline (MUST before color scheme setting)
+set rtp+=~/.fzf  " Add for (plugin) fzf
 
 set autoindent  " [ai] Enable autoindent
 set copyindent  " [ci] Copy previous line indentation on autoindent
@@ -489,6 +490,19 @@ xmap gs <plug>(GrepperOperator)
 nnoremap <Leader>g :Grepper! -tool git<CR>
 nnoremap <Leader>G :Grepper! -tool ag<CR>
 nnoremap <Leader>* :Grepper! -cword!<CR>
+
+" (plugin) fzf-vim
+" mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+" insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+" advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
 " (plugin) gtags
 noremap <C-\><C-]> :GtagsCursor<CR>
