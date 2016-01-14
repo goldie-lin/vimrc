@@ -151,6 +151,12 @@ highlight ExtraWhitespace ctermbg=DarkRed guibg=DarkCyan
 autocmd BufEnter * if &ft != 'help' | match ExtraWhitespace /\s\+$/ | endif
 autocmd BufEnter * if &ft == 'help' | match none /\s\+$/ | endif
 
+" change C syntax highlight for (plugin) aftersyntaxc.vim
+" make Operator has different color with Keywords.
+highlight cOperator term=none cterm=none ctermfg=Yellow ctermbg=bg gui=none guifg=Yellow guibg=bg
+" make Delimiter has different color with indentLine, and darker.
+highlight Delimiter term=none cterm=none ctermfg=DarkBlue ctermbg=bg gui=none guifg=DarkBlue guibg=bg
+
 " Vim filetype
 " ============
 
