@@ -329,6 +329,7 @@ let g:lightline = {
 " (plugin) Markdown
 let g:vim_markdown_initial_foldlevel=1  " set initial foldlevel
 let g:vim_markdown_folding_disabled=1  " disable folding
+let g:vim_markdown_no_default_key_mappings = 1  " disable default key mappings
 
 " (plugin) Grepper
 let g:grepper = {
