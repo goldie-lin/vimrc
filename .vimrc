@@ -339,6 +339,7 @@ let g:grepper = {
   \ 'switch':    1,
   \ 'jump':      0,
   \ 'cword':     0,
+  \ 'prompt':    1,
   \ 'next_tool': '<Tab>',
   \ 'tools':     ['git', 'ag', 'grep'],
   \ }
@@ -496,9 +497,9 @@ let g:incsearch#separate_highlight = 1
 " (plugin) Grepper
 nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
-nnoremap <Leader>g :Grepper! -tool git<CR>
-nnoremap <Leader>G :Grepper! -tool ag<CR>
-nnoremap <Leader>* :Grepper! -cword!<CR>
+nnoremap <Leader>g :Grepper -tool git<CR>
+nnoremap <Leader>G :Grepper -tool ag<CR>
+nnoremap <Leader>* :Grepper -cword -noprompt<CR>
 
 " (plugin) fzf-vim
 " mapping selecting mappings
