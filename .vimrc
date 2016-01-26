@@ -147,10 +147,11 @@ endif
 "highlight DiffChange term=reverse cterm=bold ctermfg=LightGrey ctermbg=DarkBlue  gui=bold guifg=LightGrey guibg=DarkBlue
 "highlight DiffText   term=reverse cterm=bold ctermfg=Red       ctermbg=Blue      gui=bold guifg=Red       guibg=Blue
 
-" highlight trailing whitespaces
-highlight ExtraWhitespace ctermbg=DarkRed guibg=DarkCyan
-autocmd BufEnter * if &ft != 'help' | match ExtraWhitespace /\s\+$/ | endif
-autocmd BufEnter * if &ft == 'help' | match none /\s\+$/ | endif
+" highlight trailing whitespaces and leading tabs
+highlight ExtraWhitespace ctermbg=052 guibg=052
+highlight ExtraTab ctermbg=017 guibg=017
+autocmd BufEnter * if &ft != 'help' | match ExtraTab /\(^\_s*\)\@<=\t\+/ | 2match ExtraWhitespace /\s\+$/ | endif
+autocmd BufEnter * if &ft == 'help' | match none /\(^\_s*\)\@<=\t\+/ | 2match none /\s\+$/ | endif
 
 " change C syntax highlight for (plugin) aftersyntaxc.vim
 " make Operator has different color with Keywords.
