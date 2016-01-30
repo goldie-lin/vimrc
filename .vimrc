@@ -148,8 +148,8 @@ endif
 "highlight DiffText   term=reverse cterm=bold ctermfg=Red       ctermbg=Blue      gui=bold guifg=Red       guibg=Blue
 
 " highlight trailing whitespaces and leading tabs
-highlight ExtraWhitespace ctermbg=052 guibg=052
-highlight ExtraTab ctermbg=017 guibg=017
+highlight ExtraWhitespace ctermfg=213 ctermbg=052 guifg=213 guibg=052
+highlight ExtraTab ctermfg=238 ctermbg=017 guifg=238 guibg=017
 autocmd BufEnter * if &ft != 'help' && &ft != 'tagbar' | match ExtraTab /\(^\_s*\)\@<=\t\+/ | 2match ExtraWhitespace /\s\+$/ | endif
 autocmd BufEnter * if &ft == 'help' || &ft == 'tagbar' | match none /\(^\_s*\)\@<=\t\+/ | 2match none /\s\+$/ | endif
 
