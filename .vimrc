@@ -197,20 +197,20 @@ setlocal indentexpr=GetGooglePythonIndent(v:lnum)
 let s:maxoff = 50 " maximum number of lines to look backwards.
 function! GetGooglePythonIndent(lnum)
   call cursor(a:lnum, 1)
-  let [par_line, par_col] = searchpairpos('(\|{\|\[', '', ')\|}\|\]', 'bW',
+  let [l:par_line, l:par_col] = searchpairpos('(\|{\|\[', '', ')\|}\|\]', 'bW',
         \ "line('.') < " . (a:lnum - s:maxoff) . ' ? dummy :'
         \ . " synIDattr(synID(line('.'), col('.'), 1), 'name')"
         \ . " =~ '\\(Comment\\|String\\)$'")
-  if par_line > 0
-    call cursor(par_line, 1)
-    if par_col != col('$') - 1
-      return par_col
+  if l:par_line > 0
+    call cursor(l:par_line, 1)
+    if l:par_col != col('$') - 1
+      return l:par_col
     endif
   endif
   return GetPythonIndent(a:lnum)
 endfunction
-let pyindent_nested_paren='&sw*2'
-let pyindent_open_paren='&sw*2'
+let g:pyindent_nested_paren='&sw*2'
+let g:pyindent_open_paren='&sw*2'
 
 " ':Unix2Dos' and ':Dos2Unix' commands
 function! s:Unix2Dos()
