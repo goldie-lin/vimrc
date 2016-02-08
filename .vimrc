@@ -118,7 +118,7 @@ set wildignore=CVS,.svn,.hg,.bzr,.git,.repo,*.o,*.a,*.class,*.pyc,*.mo,*.la,*.so
 " (plugin) molokai: bring 256 color as close as possible to default dark GUI.
 let g:rehash256 = 1
 
-if has("gui_running")  " for GVim
+if has('gui_running')  " for GVim
   colorscheme molokai
   set columns=100 lines=32  " default window size
   set t_Co=256  " color mode: 256
@@ -181,9 +181,9 @@ autocmd BufNewFile,BufRead *.aidl set filetype=java
 " remove trailing whitespaces when writing a buffer, but not for '.diff' files
 " From: Vigil
 "function! RemoveTrailingWhitespace()
-"  if &ft != "diff"
-"    let b:curcol = col(".")
-"    let b:curline = line(".")
+"  if &ft != 'diff'
+"    let b:curcol = col('.')
+"    let b:curline = line('.')
 "    silent! %s/\s\+$//
 "    silent! %s/\(\s*\n\)\+\%$//
 "    call cursor(b:curline, b:curcol)
@@ -198,19 +198,19 @@ let s:maxoff = 50 " maximum number of lines to look backwards.
 function! GetGooglePythonIndent(lnum)
   call cursor(a:lnum, 1)
   let [par_line, par_col] = searchpairpos('(\|{\|\[', '', ')\|}\|\]', 'bW',
-        \ "line('.') < " . (a:lnum - s:maxoff) . " ? dummy :"
+        \ "line('.') < " . (a:lnum - s:maxoff) . ' ? dummy :'
         \ . " synIDattr(synID(line('.'), col('.'), 1), 'name')"
         \ . " =~ '\\(Comment\\|String\\)$'")
   if par_line > 0
     call cursor(par_line, 1)
-    if par_col != col("$") - 1
+    if par_col != col('$') - 1
       return par_col
     endif
   endif
   return GetPythonIndent(a:lnum)
 endfunction
-let pyindent_nested_paren="&sw*2"
-let pyindent_open_paren="&sw*2"
+let pyindent_nested_paren='&sw*2'
+let pyindent_open_paren='&sw*2'
 
 " ':Unix2Dos' and ':Dos2Unix' commands
 function! s:Unix2Dos()
@@ -229,7 +229,7 @@ cmap w!! %!sudo tee > /dev/null %
 
 " always jump to the last cursor position when open file
 autocmd! BufReadPost *
-  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+  \ if line("'\"") > 0 && line ("'\"") <= line('$') |
   \   exe "normal g'\"" |
   \ endif
 
@@ -237,7 +237,7 @@ autocmd! BufReadPost *
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 
 " ':DiffOrig' to see the diff between current buffer and file it was loaded from
-if !exists(":DiffOrig")
+if !exists(':DiffOrig')
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
     \ | wincmd p | diffthis
 endif
@@ -275,17 +275,17 @@ function! ToggleLineNumber()
 endfunction
 
 " toggle textwidth and colorcolumn
-let s:TWCC = "N"
+let s:TWCC = 'N'
 function! ToggleTWCC()
   if exists('+colorcolumn')
-    if s:TWCC == "Y"
+    if s:TWCC == 'Y'
       set textwidth=0
       set colorcolumn=
-      let s:TWCC = "N"
+      let s:TWCC = 'N'
     else
       set textwidth=80  " (customizable)
       set colorcolumn=+1  " highlight 'one' column after 'textwidth'
-      let s:TWCC = "Y"
+      let s:TWCC = 'Y'
     endif
   endif
 endfunction
@@ -363,8 +363,8 @@ let g:tagbar_indent = 1  " default: 2
 "let g:autocscope_use_location_instead = 0  " disabled, keep using quickfix list
 
 " (plugin) gtags
-"let g:Gtags_Result = "ctags-x"  " tag format (old, for fallback)
-let g:Gtags_Result = "ctags-mod"  " tag format (new, required GNU GLOBAL v6.0+)
+"let g:Gtags_Result = 'ctags-x'  " tag format (old, for fallback)
+let g:Gtags_Result = 'ctags-mod'  " tag format (new, required GNU GLOBAL v6.0+)
 let g:Gtags_VerticalWindow = 0  " set to 1 will open windows vitically, otherwise horizontal
 let g:Gtags_Auto_Map = 0  " do not use suggested (built-in) key-mapping
 let g:Gtags_Auto_Update = 0  " do not keep tag files up-to-date automatically (slow down the file writting)
@@ -395,22 +395,22 @@ let g:syntastic_check_on_wq = 0  " do not check when you typed :wq, :x, and :ZZ
 let g:syntastic_auto_jump = 0  " do not automatically jump to the first detected issue
 let g:syntastic_aggregate_errors = 1  " apply all checkers and aggregate all errors found
 " check setting for filetype 'sh':
-let g:syntastic_sh_checkers = [ "bashate", "shellcheck", "sh" ]
-let g:syntastic_sh_bashate_post_args = "-i E003"  " ignore strict 4 spaces indent
-let g:syntastic_sh_shellcheck_post_args = "-e SC1091"  " ignore sourcing external files
+let g:syntastic_sh_checkers = [ 'bashate', 'shellcheck', 'sh' ]
+let g:syntastic_sh_bashate_post_args = '-i E003'  " ignore strict 4 spaces indent
+let g:syntastic_sh_shellcheck_post_args = '-e SC1091'  " ignore sourcing external files
 " check setting for filetype 'c':
-let g:syntastic_c_checkers = [ "sparse", "gcc", "cppcheck" ]
+let g:syntastic_c_checkers = [ 'sparse', 'gcc', 'cppcheck' ]
 let g:syntastic_c_check_header = 1
 let g:syntastic_c_auto_refresh_includes = 1
 let g:syntastic_c_remove_include_errors = 1
-let g:syntastic_c_sparse_post_args = "-gcc-base-dir " .
+let g:syntastic_c_sparse_post_args = '-gcc-base-dir ' .
     \ system("gcc -v 2>&1 | sed -n '/^Reading specs/ { s#.* /#/#; s#/[^/]*$##; p; }'")
-let g:syntastic_splint_config_file = ".syntastic_c_config"
-let g:syntastic_sparse_config_file = ".syntastic_c_config"
+let g:syntastic_splint_config_file = '.syntastic_c_config'
+let g:syntastic_sparse_config_file = '.syntastic_c_config'
 " check setting for filetype 'python':
-let g:syntastic_python_checkers = [ "python", "flake8" ]
-let g:syntastic_python_flake8_post_args = "--ignore E111,E114"  " ignore strict 4 spaces indent
-let g:syntastic_python_pylint_post_args = "--disable=bad-indentation"  " ignore strict 4 spaces indent
+let g:syntastic_python_checkers = [ 'python', 'flake8' ]
+let g:syntastic_python_flake8_post_args = '--ignore E111,E114'  " ignore strict 4 spaces indent
+let g:syntastic_python_pylint_post_args = '--disable=bad-indentation'  " ignore strict 4 spaces indent
 
 " (plugin) terminus
 " disable TerminusFocusReporting to prevent trigger the :checktime command
@@ -418,7 +418,7 @@ let g:syntastic_python_pylint_post_args = "--disable=bad-indentation"  " ignore 
 let g:TerminusFocusReporting = 0
 
 " (plugin) visualstar
-let g:visualstar_extra_commands = "zzzv"  " keep search results appear in the middle of the screen
+let g:visualstar_extra_commands = 'zzzv'  " keep search results appear in the middle of the screen
 
 " (plugin) EasyAlign
 " start interactive EasyAlign in visual mode
@@ -522,16 +522,16 @@ inoremap <expr> <C-x><C-k> fzf#vim#complete#word({'left': '15%'})
 noremap <C-\><C-]> :GtagsCursor<CR>
 
 " (plugin) gtags-cscope
-nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>s :cs find s <C-R>=expand('<cword>')<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand('<cword>')<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand('<cword>')<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand('<cword>')<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand('<cword>')<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand('<cfile>')<CR><CR>
+nmap <C-\>i :cs find i <C-R>=expand('<cfile>')<CR><CR>
 nmap <C-\><C-n> :cn<CR>
 nmap <C-\><C-p> :cp<CR>
-nmap <C-\><C-\><C-]> :cs find d <C-R>=expand("<cword>")<CR>:<C-R>=line('.')<CR>:%<CR>
+nmap <C-\><C-\><C-]> :cs find d <C-R>=expand('<cword>')<CR>:<C-R>=line('.')<CR>:%<CR>
 
 " (plugin) vim-tmux-navigator
 let g:tmux_navigator_no_mappings = 1
