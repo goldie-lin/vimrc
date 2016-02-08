@@ -411,6 +411,8 @@ let g:syntastic_sparse_config_file = '.syntastic_c_config'
 let g:syntastic_python_checkers = [ 'python', 'flake8' ]
 let g:syntastic_python_flake8_post_args = '--ignore E111,E114'  " ignore strict 4 spaces indent
 let g:syntastic_python_pylint_post_args = '--disable=bad-indentation'  " ignore strict 4 spaces indent
+" check setting for filetype 'vim':
+let g:syntastic_vim_checkers = [ 'vint' ]
 
 " (plugin) terminus
 " disable TerminusFocusReporting to prevent trigger the :checktime command
