@@ -151,8 +151,10 @@ endif
 " highlight trailing whitespaces and leading tabs
 highlight ExtraWhitespace ctermfg=213 ctermbg=052 guifg=213 guibg=052
 highlight ExtraTab ctermfg=238 ctermbg=017 guifg=238 guibg=017
-autocmd BufEnter * if &ft != 'help' && &ft != 'tagbar' | match ExtraTab /\(^\_s*\)\@<=\t\+/ | 2match ExtraWhitespace /\s\+$/ | endif
-autocmd BufEnter * if &ft == 'help' || &ft == 'tagbar' | match none /\(^\_s*\)\@<=\t\+/ | 2match none /\s\+$/ | endif
+augroup hl_extra_whitespaces
+  autocmd BufEnter * if &ft != 'help' && &ft != 'tagbar' | match ExtraTab /\(^\_s*\)\@<=\t\+/ | 2match ExtraWhitespace /\s\+$/ | endif
+  autocmd BufEnter * if &ft == 'help' || &ft == 'tagbar' | match none /\(^\_s*\)\@<=\t\+/ | 2match none /\s\+$/ | endif
+augroup end
 
 " change C syntax highlight for (plugin) aftersyntaxc.vim
 " make Operator has different color with Keywords.
