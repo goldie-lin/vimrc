@@ -1,6 +1,7 @@
 if !1 | finish | endif  " Skip initial for vim-tiny or vim-small
 
 if has('vim_starting')
+  " vint: -ProhibitSetNoCompatible
   set nocompatible  " [nocp] Be iMproved
 endif
 
