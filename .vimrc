@@ -41,6 +41,7 @@ Plug 'chrisbra/vim-diff-enhanced'
 Plug 'scrooloose/syntastic'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'ynkdir/vim-vimlparser'
 Plug 'kergoth/aftersyntaxc.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'plasticboy/vim-markdown'
