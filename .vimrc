@@ -181,7 +181,7 @@ autocmd BufNewFile,BufRead *.aidl set filetype=java
 " remove trailing whitespaces when writing a buffer, but not for '.diff' files
 " From: Vigil
 "function! RemoveTrailingWhitespace()
-"  if &ft != 'diff'
+"  if &ft !=# 'diff'
 "    let b:curcol = col('.')
 "    let b:curline = line('.')
 "    silent! %s/\s\+$//
@@ -278,7 +278,7 @@ endfunction
 let s:TWCC = 'N'
 function! ToggleTWCC()
   if exists('+colorcolumn')
-    if s:TWCC == 'Y'
+    if s:TWCC ==# 'Y'
       set textwidth=0
       set colorcolumn=
       let s:TWCC = 'N'
