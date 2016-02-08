@@ -81,7 +81,7 @@ set ruler  " [ru] Show coordinates of mouse cursor always
 set list  " See the difference between tabs and spaces and trailing blanks
 set cursorline  " [cul] Highlight the screen line of the cursor with CursorLine
 set number  " [nu] Show line number in front of each line.
-"set relativenumber  " [rnu] Show line number relative to the line with the cursor in front of each line.
+set relativenumber  " [rnu] Show line number relative to the line with the cursor in front of each line.
 set tabpagemax=24  " [tpm] Max number of tab pages (default: 10)
 "set noendofline binary  " [noeol] Save a file without terminator after last line
 set laststatus=2  " Fix for (plugin) Lightline (MUST before color scheme setting)
