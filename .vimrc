@@ -59,6 +59,7 @@ set encoding=utf-8  " [enc] Set encoding used inside Vim (buffers, registers, ex
 set fileencoding=utf-8  " [fenc] Set default encoding for reading file
 " [fencs] Set support encodings for reading file (default setting:ucs-bom,utf-8,default,latin1)
 set fileencodings=ucs-bom,utf-8,default,big5,gb2312,gbk,latin1
+scriptencoding utf-8  " [scripte] Specify the character encoding used in this script.
 
 " Vim options
 " ===========
