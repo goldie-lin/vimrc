@@ -360,6 +360,7 @@ let g:signify_update_on_focusgained = 1
 let g:tagbar_compact = 1  " omit short help at the top
 let g:tagbar_width = 30  " default: 40
 let g:tagbar_indent = 1  " default: 2
+autocmd CursorMoved * silent! TagbarShowTag  " instant update tag highlight during moving cursor.
 
 " (plugin) cscope
 " Note: FIXME: the location list is still very buggy on multiple tab pages.
