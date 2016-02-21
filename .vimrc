@@ -169,6 +169,9 @@ highlight cOperator term=none cterm=none ctermfg=Yellow ctermbg=bg gui=none guif
 " make Delimiter has different color with indentLine, and darker.
 highlight Delimiter term=none cterm=none ctermfg=DarkBlue ctermbg=bg gui=none guifg=DarkBlue guibg=bg
 
+" (plugin) vim-troll-stopper
+highlight TrollStopper ctermbg=Red guibg=#FF0000
+
 " Vim filetype
 " ============
 
