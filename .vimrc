@@ -156,8 +156,8 @@ endif
 "highlight DiffText   term=reverse cterm=bold ctermfg=Red       ctermbg=Blue      gui=bold guifg=Red       guibg=Blue
 
 " highlight leading and trailing whitespaces
-highlight ExtraLeadingWhitespaces  ctermfg=238 ctermbg=017 guifg=238 guibg=017
-highlight ExtraTrailingWhitespaces ctermfg=213 ctermbg=052 guifg=213 guibg=052
+highlight ExtraLeadingWhitespaces  ctermfg=238 ctermbg=017 guifg=#444444 guibg=#00005F
+highlight ExtraTrailingWhitespaces ctermfg=213 ctermbg=052 guifg=#FF87FF guibg=#5F0000
 function! HLExtraWhitespaces()
   let l:hl_extra_whitespaces_filetypes_blacklist =
     \ [ 'qf', 'help', 'man', 'taglist', 'tagbar' ]
@@ -176,9 +176,9 @@ augroup end
 
 " change C syntax highlight for (plugin) aftersyntaxc.vim
 " make Operator has different color with Keywords.
-highlight cOperator term=none cterm=none ctermfg=Yellow ctermbg=bg gui=none guifg=Yellow guibg=bg
+highlight cOperator term=none cterm=none ctermfg=Yellow gui=none guifg=#FFDF5F
 " make Delimiter has different color with indentLine, and darker.
-highlight Delimiter term=none cterm=none ctermfg=DarkBlue ctermbg=bg gui=none guifg=DarkBlue guibg=bg
+highlight Delimiter term=none cterm=none ctermfg=DarkBlue gui=none guifg=#0097FF
 
 " (plugin) vim-troll-stopper
 highlight TrollStopper ctermbg=Red guibg=#FF0000
