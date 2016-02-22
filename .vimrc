@@ -155,12 +155,23 @@ endif
 "highlight DiffChange term=reverse cterm=bold ctermfg=LightGrey ctermbg=DarkBlue  gui=bold guifg=LightGrey guibg=DarkBlue
 "highlight DiffText   term=reverse cterm=bold ctermfg=Red       ctermbg=Blue      gui=bold guifg=Red       guibg=Blue
 
-" highlight trailing whitespaces and leading tabs
-highlight ExtraWhitespace ctermfg=213 ctermbg=052 guifg=213 guibg=052
-highlight ExtraTab ctermfg=238 ctermbg=017 guifg=238 guibg=017
+" highlight leading and trailing whitespaces
+highlight ExtraLeadingWhitespaces  ctermfg=238 ctermbg=017 guifg=238 guibg=017
+highlight ExtraTrailingWhitespaces ctermfg=213 ctermbg=052 guifg=213 guibg=052
+function! HLExtraWhitespaces()
+  let l:hl_extra_whitespaces_filetypes_blacklist =
+    \ [ 'qf', 'help', 'man', 'taglist', 'tagbar' ]
+  if &buftype ==# 'nofile'
+    \ || index(l:hl_extra_whitespaces_filetypes_blacklist, &filetype) >= 0
+    match  none                     /\(^\_s*\)\@<=\t\+/
+    2match none                     /\s\+$/
+  else
+    match  ExtraLeadingWhitespaces  /\(^\_s*\)\@<=\t\+/
+    2match ExtraTrailingWhitespaces /\s\+$/
+  endif
+endfunction
 augroup hl_extra_whitespaces
-  autocmd BufEnter * if &ft != 'help' && &ft != 'tagbar' | match ExtraTab /\(^\_s*\)\@<=\t\+/ | 2match ExtraWhitespace /\s\+$/ | endif
-  autocmd BufEnter * if &ft == 'help' || &ft == 'tagbar' | match none /\(^\_s*\)\@<=\t\+/ | 2match none /\s\+$/ | endif
+  autocmd BufEnter * call HLExtraWhitespaces()
 augroup end
 
 " change C syntax highlight for (plugin) aftersyntaxc.vim
