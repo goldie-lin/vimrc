@@ -163,8 +163,8 @@ function! HLExtraWhitespaces()
     \ [ 'qf', 'help', 'man', 'taglist', 'tagbar' ]
   if &buftype ==# 'nofile'
     \ || index(l:hl_extra_whitespaces_filetypes_blacklist, &filetype) >= 0
-    match  none                     /\(^\_s*\)\@<=\t\+/
-    2match none                     /\s\+$/
+    match  none
+    2match none
   else
     match  ExtraLeadingWhitespaces  /\(^\_s*\)\@<=\t\+/
     2match ExtraTrailingWhitespaces /\s\+$/
