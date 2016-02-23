@@ -166,8 +166,13 @@ function! HLExtraWhitespaces()
     match  none
     2match none
   else
-    match  ExtraLeadingWhitespaces  /\(^\_s*\)\@<=\t\+/
-    2match ExtraTrailingWhitespaces /\s\+$/
+    if &filetype !=# 'diff'
+      match  ExtraLeadingWhitespaces  /\(^\s*\)\@<=\t\+/
+      2match ExtraTrailingWhitespaces /\s\+$/
+    else
+      match  ExtraLeadingWhitespaces  /\(^[ +-]\s*\)\@<=\t\+/
+      2match ExtraTrailingWhitespaces /^\@<!\s\+$\|^\t\s*$/
+    endif
   endif
 endfunction
 augroup hl_extra_whitespaces
