@@ -188,6 +188,12 @@ highlight Delimiter term=none cterm=none ctermfg=DarkBlue gui=none guifg=#0097FF
 " (plugin) vim-troll-stopper
 highlight TrollStopper ctermbg=Red guibg=#FF0000
 
+" (plugin) syntastic
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
+
 " Vim filetype
 " ============
 
