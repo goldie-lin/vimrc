@@ -421,6 +421,11 @@ let g:syntastic_check_on_open = 0  " do not check when open file
 let g:syntastic_check_on_wq = 0  " do not check when you typed :wq, :x, and :ZZ
 let g:syntastic_auto_jump = 0  " do not automatically jump to the first detected issue
 let g:syntastic_aggregate_errors = 1  " apply all checkers and aggregate all errors found
+" syntax/style error/warning symbol
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_style_error_symbol = 'S✗'
+let g:syntastic_style_warning_symbol = 'S⚠'
 " check setting for filetype 'sh':
 let g:syntastic_sh_checkers = [ 'bashate', 'shellcheck', 'sh' ]
 let g:syntastic_sh_bashate_post_args = '-i E003'  " ignore strict 4 spaces indent
