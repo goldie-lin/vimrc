@@ -471,6 +471,10 @@ vmap <Enter> <Plug>(EasyAlign)
 " (plugin) indentLine
 let g:indentLine_char = '┆'
 
+" (plugin) neoman
+let g:neoman_find_window = 1
+let g:no_neoman_maps = 1
+
 " Custom hotkey shortcuts
 " =======================
 
