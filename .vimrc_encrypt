@@ -1,5 +1,22 @@
 "source ~/.vimrc
 
+set hlsearch  " [hls] Highlight search
+set incsearch  " [is] Search as you type instantly
+set ignorecase  " [ic] Ignore case when search
+set smartcase  " [scs] Ignore case if pattern is all lowercase, case-sensitive otherwise
+set showmode  " [smd] Show current mode (INSERT|REPLACE|VISUAL) in last line
+set showmatch  " [sm] Show (flash) match `([{' after input `([{', beep if not found
+set showcmd  " [sc] Show incomplete command in the lower right corner
+set ruler  " [ru] Show coordinates of mouse cursor always
+set laststatus=2  " Fix for (plugin) Lightline (MUST before color scheme setting)
+set autoindent  " [ai] Enable autoindent
+set copyindent  " [ci] Copy previous line indentation on autoindent
+set smartindent  " [si] Enable smartindent
+set wildmenu  " [wmnu] Show wildmenu during tab auto-completion
+set wildmode=list:longest,full
+set wildignore=CVS,.svn,.hg,.bzr,.git,.repo,*.o,*.a,*.class,*.pyc,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
+set t_Co=256  " color mode: 256
+
 set nobackup
 set noswapfile
 set nowritebackup
