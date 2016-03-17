@@ -495,13 +495,13 @@ nnoremap J mzJ`z
 " disable Q for Ex-mode that I never use
 nnoremap Q <Nop>
 
-" disable <F1> for help, :h[elp] is more useful for the experienced user
-nnoremap <F1> <Nop>
-inoremap <F1> <Nop>
-
 " browse the input history in command mode
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
+
+" disable <F1> for help, :h[elp] is more useful for the experienced user
+nnoremap <F1> <Nop>
+inoremap <F1> <Nop>
 
 " toggle-and-show the 'paste' option
 nnoremap <F2> :set invpaste paste?<CR>
