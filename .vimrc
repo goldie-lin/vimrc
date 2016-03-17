@@ -451,6 +451,8 @@ let g:syntastic_python_flake8_post_args = '--ignore E111,E114'  " ignore strict 
 let g:syntastic_python_pylint_post_args = '--disable=bad-indentation'  " ignore strict 4 spaces indent
 " check setting for filetype 'vim':
 let g:syntastic_vim_checkers = [ 'vint', 'vimlint' ]
+" check setting for filetype 'markdown':
+let g:syntastic_markdown_checkers = [ 'mdl' ]
 
 " (plugin) terminus
 " disable TerminusFocusReporting to prevent trigger the :checktime command
