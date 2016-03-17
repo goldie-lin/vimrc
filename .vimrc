@@ -453,6 +453,8 @@ let g:syntastic_python_pylint_post_args = '--disable=bad-indentation'  " ignore 
 let g:syntastic_vim_checkers = [ 'vint', 'vimlint' ]
 " check setting for filetype 'markdown':
 let g:syntastic_markdown_checkers = [ 'mdl' ]
+let g:syntastic_markdown_mdl_exec = 'markdownlint'
+let g:syntastic_markdown_mdl_args = ''
 
 " (plugin) terminus
 " disable TerminusFocusReporting to prevent trigger the :checktime command
