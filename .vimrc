@@ -476,6 +476,9 @@ let g:indentLine_char = '┆'
 let g:neoman_find_window = 1
 let g:no_neoman_maps = 1
 
+" (plugin) diminactive
+let g:diminactive_enable_focus = 1
+
 " Custom hotkey shortcuts
 " =======================
 
