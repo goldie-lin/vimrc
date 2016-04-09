@@ -160,9 +160,11 @@ endif
 highlight ExtraLeadingWhitespaces  ctermfg=238 ctermbg=017 guifg=#444444 guibg=#00005F
 highlight ExtraTrailingWhitespaces ctermfg=213 ctermbg=052 guifg=#FF87FF guibg=#5F0000
 function! HLExtraWhitespaces()
+  let l:hl_extra_whitespaces_buftypes_blacklist =
+    \ [ 'help', 'quickfix', 'nofile', 'nowrite', 'acwrite' ]
   let l:hl_extra_whitespaces_filetypes_blacklist =
     \ [ 'qf', 'help', 'man', 'taglist', 'tagbar' ]
-  if &buftype ==# 'nofile'
+  if index(l:hl_extra_whitespaces_buftypes_blacklist, &buftype) >= 0
     \ || index(l:hl_extra_whitespaces_filetypes_blacklist, &filetype) >= 0
     match  none
     2match none
