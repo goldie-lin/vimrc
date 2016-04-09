@@ -163,7 +163,7 @@ function! HLExtraWhitespaces()
   let l:hl_extra_whitespaces_buftypes_blacklist =
     \ [ 'help', 'quickfix', 'nofile', 'nowrite', 'acwrite' ]
   let l:hl_extra_whitespaces_filetypes_blacklist =
-    \ [ 'qf', 'help', 'man', 'taglist', 'tagbar' ]
+    \ [ 'help', 'qf', 'man', 'neoman', 'taglist', 'tagbar' ]
   if index(l:hl_extra_whitespaces_buftypes_blacklist, &buftype) >= 0
     \ || index(l:hl_extra_whitespaces_filetypes_blacklist, &filetype) >= 0
     match  none
