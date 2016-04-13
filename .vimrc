@@ -126,16 +126,13 @@ set wildignore=CVS,.svn,.hg,.bzr,.git,.repo,*.o,*.a,*.class,*.pyc,*.mo,*.la,*.so
 
 " (plugin) molokai: bring 256 color as close as possible to default dark GUI.
 let g:rehash256 = 1
+colorscheme molokai
+set t_Co=256
 
 if has('gui_running')  " gVim
-  colorscheme molokai
   set columns=100 lines=32  " default window size
-  set t_Co=256  " color mode: 256
   set guifont=Terminus\ 10,AR\ PL\ UMing\ TW\ 10  " font and fone-size
   set guifontwide=AR\ PL\ UMing\ TW\ 10  " font-wide as CJK font size as above line
-else  " for terminal Vim
-  colorscheme molokai
-  set t_Co=256  " color mode: 256
 endif
 
 " Vim highlight color
