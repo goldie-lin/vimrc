@@ -77,6 +77,7 @@ set nobackup  " [nobk] Do not make a backup file
 set virtualedit=block  " [ve] Allow moving cursor outside the actual text in visual block mode
 set splitbelow  " [sb] Split a window will put the new window below the current one
 set splitright  " [spr] Split a window will put the new window right of the current one
+set fillchars+=vert:│  " [fcs] Character of vertical separators, set to '│' (\u2502) as same as tmux.
 set hlsearch  " [hls] Highlight search
 set incsearch  " [is] Search as you type instantly
 set ignorecase  " [ic] Ignore case when search
