@@ -131,8 +131,6 @@ set t_Co=256
 
 if has('gui_running')  " gVim
   set columns=100 lines=32  " default window size
-  set guifont=Terminus\ 10,AR\ PL\ UMing\ TW\ 10  " font and fone-size
-  set guifontwide=AR\ PL\ UMing\ TW\ 10  " font-wide as CJK font size as above line
 endif
 
 " Vim highlight color
