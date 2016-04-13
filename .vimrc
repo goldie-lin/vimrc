@@ -87,7 +87,7 @@ set showmatch  " [sm] Show (flash) match `([{' after input `([{', beep if not fo
 set showcmd  " [sc] Show incomplete command in the lower right corner
 set ruler  " [ru] Show coordinates of mouse cursor always
 set list  " See the difference between tabs and spaces and trailing blanks
-set cursorline  " [cul] Highlight the screen line of the cursor with CursorLine
+set nocursorline  " [cul] Highlight the screen line of the cursor with CursorLine (FIXME: slow down console drawing, so disabled temporarily.)
 set number  " [nu] Show line number in front of each line.
 set relativenumber  " [rnu] Show line number relative to the line with the cursor in front of each line.
 set tabpagemax=24  " [tpm] Max number of tab pages (default: 10)
