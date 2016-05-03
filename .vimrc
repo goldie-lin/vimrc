@@ -480,6 +480,10 @@ let g:no_neoman_maps = 1
 " (plugin) diminactive
 let g:diminactive_enable_focus = 1
 
+" (plugin) vim-peekaboo
+let g:peekaboo_window = 'vertical botright 30new'
+let g:peekaboo_delay = 500
+
 " Custom hotkey shortcuts
 " =======================
 
