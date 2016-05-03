@@ -20,7 +20,6 @@ Plug 'thinca/vim-visualstar'
 Plug 'mhinz/vim-grepper'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-easy-align'
 Plug 'mhinz/vim-signify'
 Plug 'Yggdroot/indentLine'
 Plug 'nhooyr/neoman.vim'
