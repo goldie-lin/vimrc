@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomasr/molokai'
 Plug 'blueyed/vim-diminactive'
 Plug 'itchyny/lightline.vim'
+Plug 'coderifous/textobj-word-column.vim'
 Plug 'majutsushi/tagbar'
 Plug 'goldie-lin/vim-gtags'
 Plug 'goldie-lin/vim-gtags-cscope'
