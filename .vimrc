@@ -96,6 +96,7 @@ set list  " See the difference between tabs and spaces and trailing blanks
 set nocursorline  " [cul] Highlight the screen line of the cursor with CursorLine (FIXME: slow down console drawing, so disabled temporarily.)
 set number  " [nu] Show line number in front of each line.
 set norelativenumber  " [rnu] Show line number relative to the line with the cursor in front of each line. (FIXME: slow down console drawing, so disabled temporarily.)
+set sidescroll=1  " [ss] The minimal number of columns to scroll horizontally. (It will slow down console drawing.)
 set tabpagemax=24  " [tpm] Max number of tab pages (default: 10)
 set updatetime=300  " [ut] Swap file update interval (ms) (default: 4000)
 "set noendofline binary  " [noeol] Save a file without terminator after last line
