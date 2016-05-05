@@ -103,6 +103,10 @@ set updatetime=300  " [ut] Swap file update interval (ms) (default: 4000)
 set laststatus=2  " Fix for (plugin) Lightline (MUST before color scheme setting)
 set rtp+=~/.fzf  " Add for (plugin) fzf
 
+set breakindent  " [bri] Every wrapped line will continue visually indented.
+set breakindentopt=sbr  " [briopt] Settings for 'breakindent'.
+let &showbreak = '↪> '  " [sbr] String to put at the start of lines that have been wrapped.
+
 set autoindent  " [ai] Enable autoindent
 set copyindent  " [ci] Copy previous line indentation on autoindent
 set smartindent  " [si] Enable smartindent
