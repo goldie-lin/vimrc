@@ -522,6 +522,10 @@ cnoremap <C-p> <Up>
 "nnoremap <F1> <Nop>
 "inoremap <F1> <Nop>
 
+" insert current timestamp
+nnoremap <F1>     "=strftime("%Y-%m-%d (%a) %H:%M:%S")<CR>P
+inoremap <F1> <C-R>=strftime("%Y-%m-%d (%a) %H:%M:%S")<CR>
+
 " toggle-and-show the 'paste' option
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
