@@ -519,8 +519,8 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
 " disable <F1> for help, :h[elp] is more useful for the experienced user
-nnoremap <F1> <Nop>
-inoremap <F1> <Nop>
+"nnoremap <F1> <Nop>
+"inoremap <F1> <Nop>
 
 " toggle-and-show the 'paste' option
 nnoremap <F2> :set invpaste paste?<CR>
