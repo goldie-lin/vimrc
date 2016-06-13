@@ -276,6 +276,12 @@ autocmd! BufReadPost *
   \   exe "normal g'\"" |
   \ endif
 
+" but, always start git commit message with the cursor in the first line
+autocmd BufEnter *
+  \ if &filetype == 'gitcommit' |
+  \   call setpos('.', [0, 1, 1]) |
+  \ endif
+
 " ':Rpdf' to view PDF (required package 'pdftotext' (poppler-utils))
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 
