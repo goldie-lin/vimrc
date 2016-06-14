@@ -51,6 +51,7 @@ Plug 'chrisbra/vim-diff-enhanced'
 Plug 'scrooloose/syntastic'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'SirVer/ultisnips'
 Plug 'ynkdir/vim-vimlparser'
 Plug 'syngan/vim-vimlint'
 Plug 'ap/vim-css-color'
