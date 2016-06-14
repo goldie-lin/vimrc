@@ -52,6 +52,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'ynkdir/vim-vimlparser'
 Plug 'syngan/vim-vimlint'
 Plug 'ap/vim-css-color'
