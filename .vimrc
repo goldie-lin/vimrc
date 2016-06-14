@@ -477,6 +477,14 @@ let g:syntastic_markdown_checkers = [ 'mdl' ]
 let g:syntastic_markdown_mdl_exec = 'markdownlint'
 let g:syntastic_markdown_mdl_args = ''
 
+" (plugin) UltiSnips
+let g:UltiSnipsSnippetDirectories=[ 'UltiSnips', 'ultisnips_my' ]
+let g:UltiSnipsExpandTrigger = '<C-Tab>'
+let g:UltiSnipsListSnippets = '<C-S-Tab>'
+let g:UltiSnipsJumpForwardTrigger = '<C-b>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-z>'
+let g:UltiSnipsEditSplit = 'vertical'
+
 " (plugin) terminus
 " disable TerminusFocusReporting to prevent trigger the :checktime command
 " that will interfere tmux highlighting the window activity in status line.
