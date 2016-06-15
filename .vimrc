@@ -585,6 +585,12 @@ nnoremap <Leader>g :Grepper -tool git<CR>
 nnoremap <Leader>G :Grepper -tool ag<CR>
 nnoremap <Leader>* :Grepper -cword -noprompt<CR>
 
+" (plugin) gitgutter
+omap ih <Plug>GitGutterTextObjectInnerPending
+omap ah <Plug>GitGutterTextObjectOuterPending
+xmap ih <Plug>GitGutterTextObjectInnerVisual
+xmap ah <Plug>GitGutterTextObjectOuterVisual
+
 " (plugin) fzf-vim
 " mapping selecting mappings
 nmap <Leader><Tab> <Plug>(fzf-maps-n)
