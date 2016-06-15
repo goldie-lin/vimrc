@@ -24,6 +24,7 @@ Plug 'mhinz/vim-grepper'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tommcdo/vim-lion'
+Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'nhooyr/neoman.vim'
 Plug 'zdict/zdict.vim'
