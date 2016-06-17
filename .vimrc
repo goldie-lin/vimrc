@@ -503,6 +503,23 @@ let g:diminactive_enable_focus = 1
 let g:peekaboo_window = 'vertical botright 30new'
 let g:peekaboo_delay = 500
 
+" (plugin) vim-table-mode
+let g:table_mode_fillchar = '-'
+let g:table_mode_separator = '|'
+let g:table_mode_corner = '|'
+let g:table_mode_corner_corner = '|'
+let g:table_mode_delimiter = ','
+let g:table_mode_align_char = ':'
+let g:table_mode_map_prefix = '<Leader>t'
+let g:table_mode_toggle_map = 'm'
+let g:table_mode_realign_map = '<Leader>tr'
+let g:table_mode_delete_row_map = '<Leader>tdd'
+let g:table_mode_delete_column_map = '<Leader>tdc'
+let g:table_mode_add_formula_map = '<Leader>tfa'
+let g:table_mode_eval_formula_map = '<Leader>tfe'
+let g:table_mode_echo_cell_map = '<Leader>t?'
+let g:table_mode_sort_map = '<Leader>ts'
+
 " Custom hotkey shortcuts
 " =======================
 
