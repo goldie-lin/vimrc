@@ -203,10 +203,14 @@ highlight Delimiter term=none cterm=none ctermfg=DarkBlue gui=none guifg=#0097FF
 highlight TrollStopper ctermbg=Red guibg=#FF0000
 
 " (plugin) syntastic
-highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
-highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
+"highlight link SyntasticErrorSign SignColumn
+"highlight link SyntasticWarningSign SignColumn
+"highlight link SyntasticStyleErrorSign SignColumn
+"highlight link SyntasticStyleWarningSign SignColumn
+highlight SyntasticErrorSig         ctermfg=213 ctermbg=160 guifg=#FF87FF guibg=#D70000
+highlight SyntasticWarningSign      ctermfg=229 ctermbg=136 guifg=#FFFFAF guibg=#AF8700
+highlight SyntasticStyleErrorSign   ctermfg=213 ctermbg=160 guifg=#FF87FF guibg=#D70000
+highlight SyntasticStyleWarningSign ctermfg=229 ctermbg=136 guifg=#FFFFAF guibg=#AF8700
 
 " Vim filetype
 " ============
