@@ -477,6 +477,21 @@ let g:syntastic_markdown_checkers = [ 'mdl' ]
 let g:syntastic_markdown_mdl_exec = 'markdownlint'
 let g:syntastic_markdown_mdl_args = ''
 
+" (plugin) YouCompleteMe
+let g:ycm_filetype_blacklist = {
+  \ 'tagbar' : 1,
+  \ 'taglist' : 1,
+  \ 'qf' : 1,
+  \ 'notes' : 1,
+  \ 'markdown' : 1,
+  \ 'unite' : 1,
+  \ 'text' : 1,
+  \ 'vimwiki' : 1,
+  \ 'pandoc' : 1,
+  \ 'infolog' : 1,
+  \ 'mail' : 1
+  \ }
+
 " (plugin) UltiSnips
 let g:UltiSnipsSnippetDirectories=[ 'UltiSnips', 'ultisnips_my' ]
 let g:UltiSnipsExpandTrigger = '<C-Tab>'
