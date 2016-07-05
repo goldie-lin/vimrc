@@ -506,6 +506,9 @@ let g:UltiSnipsEditSplit = 'vertical'
 " that will interfere tmux highlighting the window activity in status line.
 let g:TerminusFocusReporting = 0
 
+" (plugin) vim-over
+let g:over#command_line#search#enable_incsearch = 0
+
 " (plugin) visualstar
 let g:visualstar_extra_commands = 'zzzv'  " keep search results appear in the middle of the screen
 
