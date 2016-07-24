@@ -350,9 +350,6 @@ endfunction
 " Vim syntax
 " ==========
 
-" (syntax) DTS/DSTI (device tree files)
-autocmd BufRead,BufNewFile *.dts,*.dtsi set filetype=dts
-
 " (syntax) C/C++ enhancement
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
