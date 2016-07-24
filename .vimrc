@@ -67,7 +67,6 @@ Plug 'dzeban/vim-log-syntax'
 Plug 'thinca/vim-logcat'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Matt-Deacalion/vim-systemd-syntax'
-Plug 'vimperator/vimperator.vim'
 Plug 'tmux-plugins/vim-tmux'
 call plug#end()
 
