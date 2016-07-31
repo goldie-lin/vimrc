@@ -567,6 +567,15 @@ nnoremap Q <Nop>
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
+" add some key bindings for command mode to make it similar to bash
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-d> <Del>
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
+
 " disable <F1> for help, :h[elp] is more useful for the experienced user
 "nnoremap <F1> <Nop>
 "inoremap <F1> <Nop>
