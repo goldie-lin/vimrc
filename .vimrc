@@ -136,6 +136,9 @@ set wildmode=list:longest,full
 " [wig] Ignore these files when completing names and in explorer
 set wildignore=CVS,.svn,.hg,.bzr,.git,.repo,*.o,*.a,*.class,*.pyc,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 
+" folding settings
+set foldmethod=marker  " [fdm] enable fold marker, i.e., '{{{' and '}}}'. (default: manual)
+
 " Vim color scheme and font
 " =========================
 
