@@ -56,7 +56,6 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ynkdir/vim-vimlparser'
-Plug 'syngan/vim-vimlint'
 Plug 'ap/vim-css-color'
 Plug 'kergoth/aftersyntaxc.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
