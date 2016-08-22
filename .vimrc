@@ -542,6 +542,15 @@ let g:table_mode_eval_formula_map = '<Leader>tfe'
 let g:table_mode_echo_cell_map = '<Leader>t?'
 let g:table_mode_sort_map = '<Leader>ts'
 
+" (plugin) boshiamy
+let g:boshiamy_cancel_key = '<C-h>'
+let g:boshiamy_toggle_key = ',,'
+let g:boshiamy_switch_boshiamy = ',t,'
+let g:boshiamy_switch_kana = ',j,'
+let g:boshiamy_switch_wide = ',w,'
+let g:boshiamy_switch_rune = ',r,'
+inoremap <Space> <C-R>=boshiamy#send_key()<CR>
+
 " Custom hotkey shortcuts
 " =======================
 
