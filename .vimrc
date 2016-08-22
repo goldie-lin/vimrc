@@ -9,6 +9,7 @@ endif
 " =============
 
 call plug#begin('~/.vim/plugged')
+Plug 'pi314/boshiamy.vim'
 Plug 'tomasr/molokai'
 Plug 'blueyed/vim-diminactive'
 Plug 'itchyny/lightline.vim'
