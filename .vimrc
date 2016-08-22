@@ -366,13 +366,14 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left':  [ [ 'mode', 'paste' ],
-      \              [ 'fugitive', 'readonly', 'filename', 'modified' ] ],
+      \              [ 'fugitive', 'readonly', 'filename', 'modified', 'boshiamy' ] ],
       \   'right': [ [ 'syntastic', 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component': {
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
+      \   'boshiamy': '%{boshiamy#status()}'
       \ },
       \ 'component_visible_condition': {
       \   'readonly': '(&filetype!="help"&& &readonly)',
