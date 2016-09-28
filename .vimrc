@@ -52,6 +52,7 @@ Plug 'wincent/terminus'
 Plug 'lilydjwg/fcitx.vim'
 Plug 'chrisbra/vim-diff-enhanced'
 Plug 'scrooloose/syntastic'
+Plug 'metakirby5/codi.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'SirVer/ultisnips'
