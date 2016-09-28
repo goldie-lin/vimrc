@@ -402,7 +402,7 @@ let g:grepper = {
   \ 'cword':     0,
   \ 'prompt':    1,
   \ 'next_tool': '<Tab>',
-  \ 'tools':     ['git', 'ag', 'grep'],
+  \ 'tools':     ['git', 'ag', 'rg', 'grep'],
   \ }
 
 " (plugin) Tagbar
@@ -641,6 +641,7 @@ nmap gs <Plug>(GrepperOperator)
 xmap gs <Plug>(GrepperOperator)
 nnoremap <Leader>g :Grepper -tool git<CR>
 nnoremap <Leader>G :Grepper -tool ag<CR>
+nnoremap <Leader><C-g> :Grepper -tool rg<CR>
 nnoremap <Leader>* :Grepper -cword -noprompt<CR>
 
 " (plugin) gitgutter
