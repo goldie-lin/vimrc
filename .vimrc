@@ -499,10 +499,10 @@ let g:ycm_key_invoke_completion = '<C-Space>'
 
 " (plugin) UltiSnips
 let g:UltiSnipsSnippetDirectories=[ 'UltiSnips', 'ultisnips_my' ]
-let g:UltiSnipsExpandTrigger = '<C-Tab>'
+let g:UltiSnipsExpandTrigger = '<C-e>'  " not '<Tab>' to make sure no conflict with YouCompleteMe
 let g:UltiSnipsListSnippets = '<C-S-Tab>'
-let g:UltiSnipsJumpForwardTrigger = '<C-b>'
-let g:UltiSnipsJumpBackwardTrigger = '<C-z>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'  " be careful, do not conflict with YouCompleteMe
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'  " be careful, do not conflict with YouCompleteMe
 let g:UltiSnipsEditSplit = 'vertical'
 
 " (plugin) terminus
