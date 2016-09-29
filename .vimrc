@@ -493,6 +493,9 @@ let g:ycm_filetype_blacklist = {
   \ 'infolog' : 1,
   \ 'mail' : 1
   \ }
+let g:ycm_key_list_select_completion = [ '<C-n>', '<Tab>', '<Down>' ]
+let g:ycm_key_list_previous_completion = [ '<C-p>', '<S-Tab>', '<Up>' ]
+let g:ycm_key_invoke_completion = '<C-Space>'
 
 " (plugin) UltiSnips
 let g:UltiSnipsSnippetDirectories=[ 'UltiSnips', 'ultisnips_my' ]
