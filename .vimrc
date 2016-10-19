@@ -360,6 +360,9 @@ let g:cpp_experimental_template_highlight = 1
 " Vim plugin
 " ==========
 
+" (plugin) vim-plug
+delc PlugUpgrade  " Delete command, since I don't use it anymore.
+
 " (plugin) Lightline
 " Depend_and_integrate_with: Fugitive, Syntastic.
 set noshowmode  " do not show mode message on the last line
