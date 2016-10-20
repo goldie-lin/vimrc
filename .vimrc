@@ -220,9 +220,8 @@ highlight SyntasticStyleWarningSign ctermfg=229 ctermbg=136 guifg=#FFFFAF guibg=
 " ============
 
 " filetype-specific settings
-filetype on         " enable filetype detection
-filetype indent on  " enable filetype-specific indenting
-filetype plugin on  " enable filetype-specific plugins
+" enable filetype-specific plugins, filetype-specific indenting, and filetype detection.
+filetype plugin indent on
 
 " custom filetype remaps
 autocmd BufNewFile,BufRead *.jsm set filetype=javascript
