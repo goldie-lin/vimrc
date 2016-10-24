@@ -11,6 +11,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
 Plug 'pi314/boshiamy.vim'
+Plug 'justinmk/molokai'
 Plug 'blueyed/vim-diminactive'
 Plug 'itchyny/lightline.vim'
 Plug 'coderifous/textobj-word-column.vim'
