@@ -24,7 +24,7 @@ Plug 'osyo-manga/vim-over'
 Plug 'haya14busa/incsearch.vim'
 Plug 'thinca/vim-visualstar'
 Plug 'mhinz/vim-grepper'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tommcdo/vim-lion'
 Plug 'airblade/vim-gitgutter'
