@@ -376,7 +376,7 @@ let g:lightline = {
       \ },
       \ 'component': {
       \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
-      \   'boshiamy': '%{boshiamy#status()}'
+      \   'boshiamy': '%{boshiamy#mode()}'
       \ },
       \ 'component_visible_condition': {
       \   'readonly': '(&filetype!="help"&& &readonly)',
@@ -550,12 +550,10 @@ let g:table_mode_echo_cell_map = '<Leader>t?'
 let g:table_mode_sort_map = '<Leader>ts'
 
 " (plugin) boshiamy
-let g:boshiamy_cancel_key = '<C-h>'
-let g:boshiamy_toggle_key = ',,'
-let g:boshiamy_switch_boshiamy = ',t,'
-let g:boshiamy_switch_kana = ',j,'
-let g:boshiamy_switch_wide = ',w,'
-let g:boshiamy_switch_rune = ',r,'
+let g:boshiamy_cancel_input = '<C-h>'
+let g:boshiamy_toggle_english = ',,'
+let g:boshiamy_select_mode = ',m'
+
 inoremap <Space> <C-R>=boshiamy#send_key()<CR>
 
 " Custom hotkey shortcuts
