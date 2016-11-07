@@ -554,8 +554,6 @@ let g:boshiamy_cancel_input = '<C-h>'
 let g:boshiamy_toggle_english = ',,'
 let g:boshiamy_select_mode = ',m'
 
-inoremap <Space> <C-R>=boshiamy#send_key()<CR>
-
 " Custom hotkey shortcuts
 " =======================
 
