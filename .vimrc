@@ -557,6 +557,10 @@ let g:boshiamy_select_mode = ',m'
 " Custom hotkey shortcuts
 " =======================
 
+" better j,k when line wrapped.
+nnoremap j gj
+nnoremap k gk
+
 " keep search results appear in the middle of the screen
 " Ref: http://vim.wikia.com/wiki/Make_search_results_appear_in_the_middle_of_the_screen#Simple_mappings
 "nnoremap n nzz
