@@ -404,6 +404,10 @@ let g:grepper = {
   \ 'jump':      0,
   \ 'cword':     0,
   \ 'prompt':    1,
+  \ 'simple_prompt': 1,
+  \ 'highlight': 1,
+  \ 'buffer':    0,
+  \ 'buffers':   0,
   \ 'next_tool': '<Tab>',
   \ 'tools':     ['git', 'ag', 'rg', 'grep'],
   \ }
