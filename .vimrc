@@ -601,7 +601,7 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
 " list all buffers and wait for user selection.
-nnoremap <Leader>b :ls<CR>:b<Space>
+nnoremap <Leader>b :ls<CR>:b
 
 " disable <F1> for help, :h[elp] is more useful for the experienced user
 "nnoremap <F1> <Nop>
