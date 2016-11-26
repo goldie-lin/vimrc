@@ -521,6 +521,7 @@ let g:TerminusFocusReporting = 0
 let g:over#command_line#search#enable_incsearch = 0
 
 " (plugin) visualstar
+let g:visualstar_no_default_key_mappings = 1  " disable default key mappings
 let g:visualstar_extra_commands = 'zzzv'  " keep search results appear in the middle of the screen
 
 " (plugin) indentLine
