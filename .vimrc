@@ -561,6 +561,9 @@ let g:boshiamy_cancel_input = '<C-h>'
 let g:boshiamy_toggle_english = ',,'
 let g:boshiamy_select_mode = ',m'
 
+" (plugin) bufkill
+let g:BufKillCreateMappings = 0  " disable default key mappings
+
 " Custom hotkey shortcuts
 " =======================
 
