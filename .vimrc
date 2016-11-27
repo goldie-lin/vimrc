@@ -608,6 +608,11 @@ cnoremap <C-p> <Up>
 " list all buffers and wait for user selection.
 nnoremap <Leader>b :ls<CR>:b
 
+" better indent in visual mode for repeat, keep the same selection selected in the same mode.
+" Ref: https://wen00072.github.io/blog/2016/11/26/vim-setup-for-trace-c-code/
+vnoremap < <gv
+vnoremap > >gv
+
 " disable <F1> for help, :h[elp] is more useful for the experienced user
 "nnoremap <F1> <Nop>
 "inoremap <F1> <Nop>
