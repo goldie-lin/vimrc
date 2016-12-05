@@ -608,6 +608,9 @@ cnoremap <C-p> <Up>
 " list all buffers and wait for user selection.
 nnoremap <Leader>b :ls<CR>:b
 
+" list all buffers and wait for user selection with (plugin) fzf-vim.
+nnoremap <Leader>l :Buffers<CR>
+
 " better indent in visual mode for repeat, keep the same selection selected in the same mode.
 " Ref: https://wen00072.github.io/blog/2016/11/26/vim-setup-for-trace-c-code/
 vnoremap < <gv
