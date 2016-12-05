@@ -564,6 +564,11 @@ let g:boshiamy_select_mode = ',m'
 " (plugin) bufkill
 let g:BufKillCreateMappings = 0  " disable default key mappings
 
+" (plugin) fzf
+let g:fzf_prefer_tmux = 1  " force fzf to prefer using tmux instead of
+                           " neovim's terminal, to avoid incrementing the
+                           " buffer number every time I use fzf facilities.
+
 " Custom hotkey shortcuts
 " =======================
 
