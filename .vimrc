@@ -439,7 +439,7 @@ let g:Gtags_Close_When_Single = 1  " close quickfix windows in case of single ta
 set tags+=./tags,./TAGS,tags,TAGS;/
 set tagstack
 set cscopeprg=gtags-cscope
-set cscopetag
+"set cscopetag
 set cscopetagorder=0
 set cscopequickfix=s-,c-,d-,i-,t-,e-,g-  " you can open quickfix list manually by typing ':cw'
 let g:GtagsCscope_Auto_Load = 1  " auto load gtags for cscope database connection
