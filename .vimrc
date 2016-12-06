@@ -437,6 +437,7 @@ let g:Gtags_Close_When_Single = 1  " close quickfix windows in case of single ta
 
 " (plugin) gtags-cscope
 set tags+=./tags,./TAGS,tags,TAGS;/
+set tagstack
 set cscopeprg=gtags-cscope
 set cscopetag
 set cscopetagorder=0
