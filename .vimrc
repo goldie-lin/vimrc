@@ -392,6 +392,9 @@ let g:lightline = {
       \   'syntastic': 'error',
       \ }
       \ }
+let g:lightline.component = {
+      \ 'lineinfo': '%3l/%L:%-2v'
+      \ }
 
 " (plugin) Markdown
 let g:vim_markdown_initial_foldlevel = 1  " set initial foldlevel
