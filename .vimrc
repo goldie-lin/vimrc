@@ -417,6 +417,9 @@ let g:grepper = {
   \ 'tools':     ['git', 'ag', 'rg', 'grep'],
   \ }
 
+" (plugin) gitgutter
+let g:gitgutter_max_signs = 2500
+
 " (plugin) Tagbar
 let g:tagbar_compact = 1  " omit short help at the top
 let g:tagbar_width = 30  " default: 40
