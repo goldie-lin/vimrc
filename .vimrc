@@ -539,7 +539,13 @@ let g:visualstar_no_default_key_mappings = 1  " disable default key mappings
 let g:visualstar_extra_commands = 'zzzv'  " keep search results appear in the middle of the screen
 
 " (plugin) indentLine
-let g:indentLine_char = '┆'
+let g:indentLine_char = '¦'  " (default: '|')
+let g:indentLine_indentLevel = 6  " (default: 10)
+let g:indentLine_maxLines = 100  " (default: 3000)
+let g:indentLine_faster = 1  " (default: 0)
+let g:indentLine_bufNameExclude = [ 'help', 'quickfix', 'nofile', 'nowrite' ]  " (default: [])
+let g:indentLine_fileTypeExclude = [ 'help', 'qf', 'man', 'neoman', 'taglist', 'tagbar', 'text', 'log', 'logcat', 'gitcommit', 'markdown' ]  " (default: [])
+let g:indentLine_fileType = [ 'c', 'cpp', 'java', 'python', 'perl', 'sh' ]  " (default: [])
 
 " (plugin) neoman
 let g:neoman_find_window = 1
