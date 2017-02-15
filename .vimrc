@@ -401,6 +401,9 @@ let g:lightline.component = {
 let g:vim_markdown_initial_foldlevel = 1  " set initial foldlevel
 let g:vim_markdown_folding_disabled = 1  " disable folding
 let g:vim_markdown_no_default_key_mappings = 1  " disable default key mappings
+let g:vim_markdown_new_list_item_indent = 2  " number of spaces of new list item indent
+let g:vim_markdown_conceal = 0  " disable conceal regardless of 'conceallevel' setting
+let g:vim_markdown_fenced_languages = [ 'c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'csharp=cs' ]  " use different name from filetype
 
 " (plugin) Grepper
 let g:grepper = {
