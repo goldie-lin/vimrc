@@ -423,6 +423,8 @@ let g:grepper = {
 
 " (plugin) gitgutter
 let g:gitgutter_max_signs = 1000  " (default: 500)
+let g:gitgutter_realtime = 0  " trade speed for accuracy
+let g:gitgutter_eager = 0  " trade speed for accuracy
 
 " (plugin) Tagbar
 let g:tagbar_compact = 1  " omit short help at the top
