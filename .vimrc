@@ -422,7 +422,7 @@ let g:grepper = {
   \ }
 
 " (plugin) gitgutter
-let g:gitgutter_max_signs = 2500
+let g:gitgutter_max_signs = 1000  " (default: 500)
 
 " (plugin) Tagbar
 let g:tagbar_compact = 1  " omit short help at the top
