@@ -35,7 +35,7 @@ Plug 'nhooyr/neoman.vim'
 Plug 'zdict/zdict.vim'
 Plug 'yuratomo/w3m.vim'
 Plug 'vim-utils/vim-g2'
-Plug 'vim-utils/vim-troll-stopper'
+Plug 'vim-utils/vim-troll-stopper', { 'for': [ 'c', 'cpp', 'java', 'python', 'perl', 'sh', 'awk', 'sed', 'vim' ] }
 Plug 'hotoo/pangu.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sleuth'
