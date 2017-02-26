@@ -102,7 +102,7 @@ set showcmd  " [sc] Show incomplete command in the lower right corner
 set ruler  " [ru] Show coordinates of mouse cursor always
 set list  " See the difference between tabs and spaces and trailing blanks
 set nocursorline  " [cul] Highlight the screen line of the cursor with CursorLine (FIXME: slow down console drawing, so disabled temporarily.)
-set number  " [nu] Show line number in front of each line.
+"set number  " [nu] Show line number in front of each line.
 set norelativenumber  " [rnu] Show line number relative to the line with the cursor in front of each line. (FIXME: slow down console drawing, so disabled temporarily.)
 set sidescroll=1  " [ss] The minimal number of columns to scroll horizontally. (It will slow down console drawing.)
 set tabpagemax=24  " [tpm] Max number of tab pages (default: 10)
