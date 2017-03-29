@@ -430,6 +430,7 @@ let g:gitgutter_eager = 0  " trade speed for accuracy
 let g:tagbar_compact = 1  " omit short help at the top
 let g:tagbar_width = 30  " default: 40
 let g:tagbar_indent = 1  " default: 2
+let g:tagbar_sort = 0  " don't sort the tags (default: 1)
 "autocmd CursorMoved * silent! TagbarShowTag  " instant update tag highlight during moving cursor.
 
 " (plugin) cscope
