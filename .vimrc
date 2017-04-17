@@ -176,8 +176,8 @@ endif
 "highlight DiffText   term=reverse cterm=bold ctermfg=Red       ctermbg=Blue      gui=bold guifg=Red       guibg=Blue
 
 " highlight leading and trailing whitespaces
-highlight ExtraLeadingWhitespaces  ctermfg=238 ctermbg=017 guifg=#444444 guibg=#00005F
-highlight ExtraTrailingWhitespaces ctermfg=213 ctermbg=052 guifg=#FF87FF guibg=#5F0000
+highlight ExtraLeadingWhitespaces  ctermfg=238 ctermbg=17 guifg=#444444 guibg=#00005F
+highlight ExtraTrailingWhitespaces ctermfg=213 ctermbg=52 guifg=#FF87FF guibg=#5F0000
 function! HLExtraWhitespaces()
   let l:hl_extra_whitespaces_buftypes_blacklist =
     \ [ 'help', 'quickfix', 'nofile', 'nowrite', 'acwrite' ]
