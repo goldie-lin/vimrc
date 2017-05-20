@@ -144,13 +144,37 @@ set wildignore=CVS,.svn,.hg,.bzr,.git,.repo,*.o,*.a,*.class,*.pyc,*.mo,*.la,*.so
 " folding settings
 set foldmethod=marker  " [fdm] enable fold marker, i.e., '{{{' and '}}}'. (default: manual)
 
+" enable some of neovim-specific options.
+if has('nvim')
+  set inccommand=nosplit  " [icm] Shows the effects of a command incrementally, as you type.
+  "let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1  " (neovim) enable auto-change cursor shape, for nvim <= v0.1.7.
+  "let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0  " (neovim) disable auto-change cursor shape, for nvim <= v0.1.7.
+  "set guicursor=  " (neovim) disable auto-change cursor shape, for nvim >= v0.2.
+endif
+
+" try to enable 24bit true color if supported.
+if &term !~? 'rxvt'  " ignore unsupported terminals.
+  if has('nvim')
+    set termguicolors  " [tgc] Uses highlight-guifg and highlight-guibg attributes in the terminal (thus using 24-bit color).
+    "let $NVIM_TUI_ENABLE_TRUE_COLOR = 1  " (neovim) enable 24bit true color support. (deprecated and ignored after 2016-05-11, PR#4690.)
+  elseif has('patch-7.4.1778')
+    set termguicolors  " [tgc] Uses highlight-guifg and highlight-guibg attributes in the terminal (thus using 24-bit color).
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  endif
+endif
+
+" try to use 256color instead of 88color if terminal supported explicitly.
+if &term =~? '256color'
+  set t_Co=256
+endif
+
 " Vim color scheme and font
 " =========================
 
 " (plugin) molokai: bring 256 color as close as possible to default dark GUI.
 let g:rehash256 = 1
 colorscheme molokai
-set t_Co=256
 
 if has('gui_running')  " gVim
   set columns=100 lines=32  " default window size
