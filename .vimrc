@@ -503,6 +503,8 @@ let g:syntastic_vim_checkers = [ 'vint' ]
 let g:syntastic_markdown_checkers = [ 'mdl' ]
 let g:syntastic_markdown_mdl_exec = 'markdownlint'
 let g:syntastic_markdown_mdl_args = ''
+" check setting for filetype 'lua':
+let g:syntastic_lua_checkers = [ 'luacheck', 'luac' ]
 
 " (plugin) YouCompleteMe
 let g:ycm_filetype_blacklist = {
