@@ -173,12 +173,23 @@ endif
 " Vim color scheme and font
 " =========================
 
-" (plugin) molokai: bring 256 color as close as possible to default dark GUI.
-let g:rehash256 = 1
-colorscheme molokai
-
-if has('gui_running')  " gVim
+if has('gui_running')  " GVim
   set columns=100 lines=32  " default window size
+  if has('gui_gtk2') ||  has('gui_gtk3')  " GTK2 or GTK 3
+    set guifont=Fira\ Code\ 9
+    let g:rehash256 = 1
+    colorscheme molokai
+  elseif has('x11')  " GTK1
+    set guifont=-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
+    let g:rehash256 = 1
+    colorscheme molokai
+  elseif has('gui_win32') || has('gui_win32')  " Windows (Win32 or Win64)
+    set guifont=Consolas:h12:cANSI
+    colorscheme Tomorrow-Night-Eighties
+  endif
+else  " (console) Vim
+  let g:rehash256 = 1
+  colorscheme molokai
 endif
 
 " Vim highlight color
