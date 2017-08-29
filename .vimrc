@@ -72,6 +72,7 @@ Plug 'thinca/vim-logcat'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Matt-Deacalion/vim-systemd-syntax'
 Plug 'fedorov7/vim-uefi', { 'for': [ 'uefi', 'uni', 'vfr', 'kss', 'inform', 'c.doxygen' ] }
+Plug 'bazelbuild/vim-ft-bzl'
 Plug 'tmux-plugins/vim-tmux'
 call plug#end()
 
