@@ -520,7 +520,7 @@ let g:syntastic_style_error_symbol = 'S✗'
 let g:syntastic_style_warning_symbol = 'S⚠'
 " check setting for filetype 'sh':
 let g:syntastic_sh_checkers = [ 'bashate', 'shellcheck', 'sh' ]
-let g:syntastic_sh_bashate_post_args = '-i E003'  " ignore strict 4 spaces indent
+let g:syntastic_sh_bashate_post_args = '-i E002,E003,E006'  " ignore intent hard tabs, strict 4 spaces indent, lines longer than 79.
 let g:syntastic_sh_shellcheck_post_args = '-e SC1091'  " ignore sourcing external files
 " check setting for filetype 'c':
 let g:syntastic_c_checkers = [ 'sparse', 'gcc', 'cppcheck' ]
