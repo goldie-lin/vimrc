@@ -619,11 +619,6 @@ let g:table_mode_eval_formula_map = '<Leader>tfe'
 let g:table_mode_echo_cell_map = '<Leader>t?'
 let g:table_mode_sort_map = '<Leader>ts'
 
-" (plugin) boshiamy
-let g:boshiamy_cancel_input = '<C-h>'
-let g:boshiamy_toggle_english = ',,'
-let g:boshiamy_select_mode = ',m'
-
 " (plugin) bufkill
 let g:BufKillCreateMappings = 0  " disable default key mappings
 
