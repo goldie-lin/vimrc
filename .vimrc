@@ -734,6 +734,7 @@ xmap gs <Plug>(GrepperOperator)
 nnoremap <Leader>g :Grepper -tool git<CR>
 nnoremap <Leader>G :Grepper -tool ag<CR>
 nnoremap <Leader><C-g> :Grepper -tool rg<CR>
+nnoremap <Leader><M-g> :Grepper -tool grep<CR>
 nnoremap <Leader>* :Grepper -cword -noprompt<CR>
 
 " (plugin) gitgutter
