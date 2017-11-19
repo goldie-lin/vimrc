@@ -569,6 +569,35 @@ let g:UltiSnipsJumpForwardTrigger = '<C-j>'  " be careful, do not conflict with 
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'  " be careful, do not conflict with YouCompleteMe
 let g:UltiSnipsEditSplit = 'vertical'
 
+" (plugin) switch.vim
+" Ref: https://blog.othree.net/log/2017/11/16/naming-cases/
+" Definitions are based on above link with my additional modifications.
+"   1. camelCase -> PascalCase
+"   2. PascalCase -> snake_case
+"   3. snake_case -> MACRO_CASE
+"   4. MACRO_CASE -> Title_Caps_Snake_Case (added)
+"   5. Title_Caps_Snake_Case -> lisp-case (added)
+"   6. lisp-case -> COBOL-CASE (added)
+"   7. COBOL-CASE -> Train-Case (added)
+"   8. Train-Case -> camelCase (added)
+let g:switch_custom_definitions =
+  \ [
+  \   {
+  \     '\<\(\l\)\(\l\+\(\u\l\+\)\+\)\>': '\=toupper(submatch(1)) . submatch(2)',
+  \     '\<\(\u\l\+\)\(\u\l\+\)\+\>': "\\=tolower(substitute(submatch(0), '\\(\\l\\)\\(\\u\\)', '\\1_\\2', 'g'))",
+  \     '\<\(\l\+\)\(_\l\+\)\+\>': '\U\0',
+  \     '\<\(\u\+\)\(\(_\u\+\)\+\)\>': "\\=substitute(submatch(1), '\\(\\u\\)\\(\\u*\\)', '\\1\\L\\2', 'g') . substitute(submatch(2), '_\\(\\u\\)\\(\\u*\\)', '_\\1\\L\\2', 'g')",
+  \     '\<\(\u\l\+\)\(\(_\u\l*\)\+\)\>': "\\=tolower(submatch(1)) . substitute(submatch(2), '_\\(\\u\\l*\\)', '-\\L\\1', 'g')",
+  \     '\<\(\l\+\)\(-\l\+\)\+\>': '\U\0',
+  \     '\<\(\u\+\)\(\(-\u\+\)\+\)\>': "\\=substitute(submatch(1), '\\(\\u\\)\\(\\u*\\)', '\\1\\L\\2', 'g') . substitute(submatch(2), '-\\(\\u\\)\\(\\u*\\)', '-\\1\\L\\2', 'g')",
+  \     '\<\(\u\l\+\)\(\(-\u\l\+\)\+\)\>': "\\=tolower(submatch(1)) . substitute(submatch(2), '-', '', 'g')",
+  \     '\<\(\u\l\+\)\(-\u\l*\)\+\>': "\\=tolower(substitute(submatch(0), '-', '_', 'g'))",
+  \   }
+  \ ]
+let g:switch_mapping = '-'
+let g:switch_reverse_mapping = '+'
+"let g:switch_find_smallest_match = 0
+
 " (plugin) terminus
 " disable TerminusFocusReporting to prevent trigger the :checktime command
 " that will interfere tmux highlighting the window activity in status line.
