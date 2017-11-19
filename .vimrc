@@ -292,9 +292,9 @@ let s:maxoff = 50 " maximum number of lines to look backwards.
 function! GetGooglePythonIndent(lnum)
   call cursor(a:lnum, 1)
   let [l:par_line, l:par_col] = searchpairpos('(\|{\|\[', '', ')\|}\|\]', 'bW',
-        \ "line('.') < " . (a:lnum - s:maxoff) . ' ? dummy :'
-        \ . " synIDattr(synID(line('.'), col('.'), 1), 'name')"
-        \ . " =~ '\\(Comment\\|String\\)$'")
+    \ "line('.') < " . (a:lnum - s:maxoff) . ' ? dummy :'
+    \ . " synIDattr(synID(line('.'), col('.'), 1), 'name')"
+    \ . " =~ '\\(Comment\\|String\\)$'")
   if l:par_line > 0
     call cursor(l:par_line, 1)
     if l:par_col != col('$') - 1
@@ -407,32 +407,32 @@ delc PlugUpgrade  " Delete command, since I don't use it anymore.
 " Depend_and_integrate_with: Fugitive, Syntastic.
 set noshowmode  " do not show mode message on the last line
 let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ 'active': {
-      \   'left':  [ [ 'mode', 'paste' ],
-      \              [ 'fugitive', 'readonly', 'filename', 'modified' ] ],
-      \   'right': [ [ 'syntastic', 'lineinfo' ],
-      \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
-      \ },
-      \ 'component': {
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ 'component_expand': {
-      \   'syntastic': 'SyntasticStatuslineFlag',
-      \ },
-      \ 'component_type': {
-      \   'syntastic': 'error',
-      \ }
-      \ }
+  \ 'colorscheme': 'powerline',
+  \ 'active': {
+  \   'left':  [ [ 'mode', 'paste' ],
+  \              [ 'fugitive', 'readonly', 'filename', 'modified' ] ],
+  \   'right': [ [ 'syntastic', 'lineinfo' ],
+  \              [ 'percent' ],
+  \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+  \ },
+  \ 'component': {
+  \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
+  \ },
+  \ 'component_visible_condition': {
+  \   'readonly': '(&filetype!="help"&& &readonly)',
+  \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+  \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+  \ },
+  \ 'component_expand': {
+  \   'syntastic': 'SyntasticStatuslineFlag',
+  \ },
+  \ 'component_type': {
+  \   'syntastic': 'error',
+  \ }
+  \ }
 let g:lightline.component = {
-      \ 'lineinfo': '%3l/%L:%-2v'
-      \ }
+  \ 'lineinfo': '%3l/%L:%-2v'
+  \ }
 
 " (plugin) Markdown
 let g:vim_markdown_initial_foldlevel = 1  " set initial foldlevel
@@ -526,7 +526,7 @@ let g:syntastic_c_check_header = 1
 let g:syntastic_c_auto_refresh_includes = 1
 let g:syntastic_c_remove_include_errors = 1
 let g:syntastic_c_sparse_post_args = '-gcc-base-dir ' .
-    \ system("gcc -v 2>&1 | sed -n '/^Reading specs/ { s#.* /#/#; s#/[^/]*$##; p; }'")
+  \ system("gcc -v 2>&1 | sed -n '/^Reading specs/ { s#.* /#/#; s#/[^/]*$##; p; }'")
 let g:syntastic_splint_config_file = '.syntastic_c_config'
 let g:syntastic_sparse_config_file = '.syntastic_c_config'
 " check setting for filetype 'python':
