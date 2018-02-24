@@ -25,6 +25,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'google/vim-searchindex'
 Plug 'haya14busa/incsearch.vim'
 Plug 'thinca/vim-visualstar'
+Plug 'machakann/vim-highlightedyank'
 Plug 'mhinz/vim-grepper'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
