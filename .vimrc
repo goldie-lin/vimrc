@@ -270,6 +270,7 @@ filetype plugin indent on
 autocmd BufNewFile,BufRead *.jsm set filetype=javascript
 autocmd BufNewFile,BufRead *.rc  set filetype=sh
 autocmd BufNewFile,BufRead *.aidl set filetype=java
+autocmd BufNewFile,BufRead *.[sS] set filetype=gas
 autocmd BufRead,BufNewFile Android.bp set filetype=bzl
 
 " Custom functions/scripts
