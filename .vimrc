@@ -368,7 +368,7 @@ function! g:committia_hooks.edit_open(info)
 endfunction
 
 " ':Rpdf' to view PDF (required package 'pdftotext' (poppler-utils))
-:command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
+command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 
 " ':DiffOrig' to see the diff between current buffer and file it was loaded from
 if !exists(':DiffOrig')
