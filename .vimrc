@@ -371,10 +371,7 @@ endfunction
 command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 
 " ':DiffOrig' to see the diff between current buffer and file it was loaded from
-if !exists(':DiffOrig')
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-    \ | wincmd p | diffthis
-endif
+command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
 
 " If doing a diff. Upon writing changes to file, automatically update the differences
 " Ref: http://vim.wikia.com/wiki/Update_the_diff_view_automatically
