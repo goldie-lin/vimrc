@@ -114,7 +114,7 @@ set tabpagemax=24  " [tpm] Max number of tab pages (default: 10)
 set updatetime=300  " [ut] Swap file update interval (ms) (default: 4000)
 "set noendofline binary  " [noeol] Save a file without terminator after last line
 set laststatus=2  " Fix for (plugin) Lightline (MUST before color scheme setting)
-set rtp+=~/.fzf  " Add for (plugin) fzf
+set runtimepath+=~/.fzf  " Add for (plugin) fzf
 
 set breakindent  " [bri] Every wrapped line will continue visually indented.
 set breakindentopt=sbr  " [briopt] Settings for 'breakindent'.
@@ -317,7 +317,7 @@ function! s:Unix2Dos()
 endfunction
 function! s:Dos2Unix()
   call s:Unix2Dos()
-  setlocal ff=unix
+  setlocal fileformat=unix
 endfunction
 command! -nargs=0 Unix2Dos call s:Unix2Dos()
 command! -nargs=0 Dos2Unix call s:Dos2Unix()
