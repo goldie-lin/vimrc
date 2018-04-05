@@ -161,7 +161,7 @@ if &term !~? 'rxvt'  " ignore unsupported terminals.
   if has('nvim')
     set termguicolors  " [tgc] Uses highlight-guifg and highlight-guibg attributes in the terminal (thus using 24-bit color).
     "let $NVIM_TUI_ENABLE_TRUE_COLOR = 1  " (neovim) enable 24bit true color support. (deprecated and ignored after 2016-05-11, PR#4690.)
-  elseif has('patch-7.4.1778')
+  elseif has('termguicolors') || has('patch-7.4.1778')
     set termguicolors  " [tgc] Uses highlight-guifg and highlight-guibg attributes in the terminal (thus using 24-bit color).
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
