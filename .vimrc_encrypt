@@ -1,24 +1,51 @@
-"source ~/.vimrc
+scriptencoding utf-8
+" vint: -ProhibitSetNoCompatible
+set nocompatible
 
-set hlsearch  " [hls] Highlight search
-set incsearch  " [is] Search as you type instantly
-set ignorecase  " [ic] Ignore case when search
-set smartcase  " [scs] Ignore case if pattern is all lowercase, case-sensitive otherwise
-set showmode  " [smd] Show current mode (INSERT|REPLACE|VISUAL) in last line
-set showmatch  " [sm] Show (flash) match `([{' after input `([{', beep if not found
-set showcmd  " [sc] Show incomplete command in the lower right corner
-set ruler  " [ru] Show coordinates of mouse cursor always
-set laststatus=2  " Fix for (plugin) Lightline (MUST before color scheme setting)
-set autoindent  " [ai] Enable autoindent
-set copyindent  " [ci] Copy previous line indentation on autoindent
-set smartindent  " [si] Enable smartindent
-set wildmenu  " [wmnu] Show wildmenu during tab auto-completion
+syntax on
+filetype plugin indent on
+
+" Required for Windows.
+"let $LANG="zh_TW.UTF-8"
+"source $VIMRUNTIME/delmenu.vim
+"set langmenu=zh_TW.UTF-8
+"set encoding=utf-8
+"source $VIMRUNTIME/menu.vim
+
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,default,big5,gb2312,gbk,latin1
+
+set updatetime=300
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+set showmode
+set showcmd
+set ruler
+set autoindent
+set copyindent
+set smartindent
+set splitbelow
+set splitright
+set virtualedit=block
+set foldmethod=marker
+set wildmenu
 set wildmode=list:longest,full
-set wildignore=CVS,.svn,.hg,.bzr,.git,.repo,*.o,*.a,*.class,*.pyc,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
-set t_Co=256  " color mode: 256
+set wildignore+=CVS,.svn,.hg,.bzr,.git,.repo
+set wildignore+=*.swp,*.o,*.obj,*.a,*.so,*.class,*.pyc,*.jpg,*.png,*.gif
+set breakindent
+set breakindentopt=sbr
+let &showbreak = '>\'
+
+set t_Co=256
+let g:rehash256 = 1
+"colorscheme molokai
+colorscheme desert
 
 set nobackup
 set noswapfile
 set nowritebackup
-"set cm=blowfish  " Required Vim 7.3 (2010-08-15)+
-set cryptmethod=blowfish2 " Requires Vim 7.4.399+
+"set cryptmethod=blowfish  " Required Vim 7.3 (2010-08-15)+
+set cryptmethod=blowfish2  " Requires Vim 7.4.399+
