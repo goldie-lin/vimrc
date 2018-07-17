@@ -567,7 +567,7 @@ let g:syntastic_vim_checkers = [ 'vint' ]
 " check setting for filetype 'markdown':
 let g:syntastic_markdown_checkers = [ 'mdl' ]
 let g:syntastic_markdown_mdl_exec = 'markdownlint'
-let g:syntastic_markdown_mdl_args = ''
+let g:syntastic_markdown_mdl_args = '--config ~/.markdownlint.json'
 " check setting for filetype 'lua':
 let g:syntastic_lua_checkers = [ 'luacheck', 'luac' ]
 
