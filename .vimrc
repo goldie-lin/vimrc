@@ -826,6 +826,7 @@ nmap <C-\>t :cs find t <C-R>=expand('<cword>')<CR><CR>
 nmap <C-\>e :cs find e <C-R>=expand('<cword>')<CR><CR>
 nmap <C-\>f :cs find f <C-R>=expand('<cfile>')<CR><CR>
 nmap <C-\>i :cs find i <C-R>=expand('<cfile>')<CR><CR>
+nmap <C-\>a :cs find a <C-R>=expand('<cword>')<CR><CR>
 nmap <C-\><C-n> :cn<CR>
 nmap <C-\><C-p> :cp<CR>
 nmap <C-\><C-\><C-]> :cs find d <C-R>=expand('<cword>')<CR>:<C-R>=line('.')<CR>:%<CR>
