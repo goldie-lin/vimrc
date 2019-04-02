@@ -516,9 +516,8 @@ let g:Gtags_No_Auto_Jump = 0  " jump to the first tag at the time of search (fin
 let g:Gtags_Close_When_Single = 1  " close quickfix windows in case of single tag
 
 " (plugin) gtags-cscope
-"set tags=./tags,tags;/
-set tags=./tags,tags;~
 "set tags=./tags,tags;$HOME
+set tags=./tags,tags;~
 set tagstack
 set cscopeprg=gtags-cscope
 "set cscopetag
