@@ -106,7 +106,6 @@ set showmode  " [smd] Show current mode (INSERT|REPLACE|VISUAL) in last line
 set showmatch  " [sm] Show (flash) match `([{' after input `([{', beep if not found
 set showcmd  " [sc] Show incomplete command in the lower right corner
 set ruler  " [ru] Show coordinates of mouse cursor always
-set list  " See the difference between tabs and spaces and trailing blanks
 set nocursorline  " [cul] Highlight the screen line of the cursor with CursorLine (FIXME: slow down console drawing, so disabled temporarily.)
 "set number  " [nu] Show line number in front of each line.
 set norelativenumber  " [rnu] Show line number relative to the line with the cursor in front of each line. (FIXME: slow down console drawing, so disabled temporarily.)
@@ -120,6 +119,8 @@ set runtimepath+=~/.fzf  " Add for (plugin) fzf
 set breakindent  " [bri] Every wrapped line will continue visually indented.
 set breakindentopt=sbr  " [briopt] Settings for 'breakindent'.
 
+" See the difference between tabs and spaces and trailing blanks
+set list
 " [sbr] String to put at the start of lines that have been wrapped.
 let &showbreak = '↳ '  " '↪ '
 
