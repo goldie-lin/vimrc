@@ -228,23 +228,30 @@ function! HLExtraWhitespaces()
     \ [ 'help', 'quickfix', 'nofile', 'nowrite', 'acwrite' ]
   let l:hl_extra_whitespaces_filetypes_blacklist =
     \ [ 'help', 'qf', 'man', 'neoman', 'taglist', 'tagbar' ]
+  let l:hl_extra_whitespaces_filetypes_diff =
+    \ [ 'diff', 'gitsendemail' ]
   if index(l:hl_extra_whitespaces_buftypes_blacklist, &buftype) >= 0
     \ || index(l:hl_extra_whitespaces_filetypes_blacklist, &filetype) >= 0
-    match  none
-    2match none
+    "match  none
+    "2match none
   else
-    if &filetype !=# 'diff'
-      match  ExtraLeadingWhitespaces  /\(^\s*\)\@<=\t\+/
-      2match ExtraTrailingWhitespaces /\s\+$/
+    if index(l:hl_extra_whitespaces_filetypes_diff, &filetype) >= 0
+      "match  ExtraLeadingWhitespaces  /\(^[ +-]\s*\)\@<=\t\+/
+      "2match ExtraTrailingWhitespaces /^\@<!\s\+$\|^\t\s*$/
+      call matchadd('ExtraLeadingWhitespaces', '\(^[ +-]\s*\)\@<=\t\+', -2)
+      call matchadd('ExtraTrailingWhitespaces', '^\@<!\s\+$\|^\t\s*$', -1)
     else
-      match  ExtraLeadingWhitespaces  /\(^[ +-]\s*\)\@<=\t\+/
-      2match ExtraTrailingWhitespaces /^\@<!\s\+$\|^\t\s*$/
+      "match  ExtraLeadingWhitespaces  /\(^\s*\)\@<=\t\+/
+      "2match ExtraTrailingWhitespaces /\s\+$/
+      call matchadd('ExtraLeadingWhitespaces', '\(^\s*\)\@<=\t\+', -2)
+      call matchadd('ExtraTrailingWhitespaces', '\s\+$', -1)
     endif
   endif
 endfunction
 augroup hl_extra_whitespaces
+  autocmd!
   autocmd BufEnter * call HLExtraWhitespaces()
-augroup end
+augroup END
 
 " change C syntax highlight for (plugin) aftersyntaxc.vim
 " make Operator has different color with Keywords.
