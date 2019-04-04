@@ -119,7 +119,9 @@ set runtimepath+=~/.fzf  " Add for (plugin) fzf
 
 set breakindent  " [bri] Every wrapped line will continue visually indented.
 set breakindentopt=sbr  " [briopt] Settings for 'breakindent'.
-let &showbreak = '↪> '  " [sbr] String to put at the start of lines that have been wrapped.
+
+" [sbr] String to put at the start of lines that have been wrapped.
+let &showbreak = '↳ '  " '↪ '
 
 set autoindent  " [ai] Enable autoindent
 set copyindent  " [ci] Copy previous line indentation on autoindent
