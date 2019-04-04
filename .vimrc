@@ -121,6 +121,8 @@ set breakindentopt=sbr  " [briopt] Settings for 'breakindent'.
 
 " See the difference between tabs and spaces and trailing blanks
 set list
+" [lcs] Strings to use in 'list' mode and for the :list command.
+set listchars=tab:»\ ,trail:•,nbsp:␣,extends:›,precedes:‹  " tab:»─,eol:↲
 " [sbr] String to put at the start of lines that have been wrapped.
 let &showbreak = '↳ '  " '↪ '
 
