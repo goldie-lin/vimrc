@@ -280,11 +280,13 @@ highlight SyntasticStyleWarningSign ctermfg=229 ctermbg=136 guifg=#FFFFAF guibg=
 filetype plugin indent on
 
 " custom filetype remaps
-autocmd BufNewFile,BufRead *.jsm set filetype=javascript
-autocmd BufNewFile,BufRead *.rc  set filetype=sh
-autocmd BufNewFile,BufRead *.aidl set filetype=java
-autocmd BufNewFile,BufRead *.[sS] set filetype=gas
-autocmd BufRead,BufNewFile Android.bp set filetype=bzl
+augroup custom_filetype_remappings
+  autocmd BufNewFile,BufRead *.jsm      setlocal filetype=javascript
+  autocmd BufNewFile,BufRead *.rc       setlocal filetype=sh
+  autocmd BufNewFile,BufRead *.aidl     setlocal filetype=java
+  autocmd BufNewFile,BufRead *.[sS]     setlocal filetype=gas
+  autocmd BufRead,BufNewFile Android.bp setlocal filetype=bzl
+augroup END
 
 " Custom functions/scripts
 " ========================
@@ -339,16 +341,22 @@ command! -nargs=0 Dos2Unix call s:Dos2Unix()
 cmap w!! %!sudo tee > /dev/null %
 
 " always jump to the last cursor position when open file
-autocmd! BufReadPost *
-  \ if line("'\"") > 0 && line ("'\"") <= line('$') |
-  \   exe "normal g'\"" |
-  \ endif
+augroup jump_to_the_last_cursor_position_when_open_file
+  autocmd!
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line('$') |
+    \   exe "normal g'\"" |
+    \ endif
+augroup END
 
 " but, always start git commit message with the cursor in the first line
-autocmd BufEnter *
-  \ if &filetype == 'gitcommit' |
-  \   call setpos('.', [0, 1, 1]) |
-  \ endif
+augroup start_git_commit_with_the_cursor_in_the_first_line
+  autocmd!
+  autocmd BufEnter *
+    \ if &filetype == 'gitcommit' |
+    \   call setpos('.', [0, 1, 1]) |
+    \ endif
+augroup END
 
 " (plugin) committia
 " add hook function when git commit.
@@ -389,11 +397,17 @@ command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincm
 
 " If doing a diff. Upon writing changes to file, automatically update the differences
 " Ref: http://vim.wikia.com/wiki/Update_the_diff_view_automatically
-autocmd BufWritePost * if &diff == 1 | diffupdate | endif
+augroup vimdiff_auto_diffupdate_upon_writing_file
+  autocmd!
+  autocmd BufWritePost * if &diff == 1 | diffupdate | endif
+augroup END
 
 " automatically open quickfix/location window if found any issue
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
+augroup vim_auto_open_quickfix_or_location_window_if_found_any_issue
+  autocmd!
+  autocmd QuickFixCmdPost [^l]* nested cwindow
+  autocmd QuickFixCmdPost    l* nested lwindow
+augroup END
 
 " toggle mouse mode
 function! ToggleMouseMode()
