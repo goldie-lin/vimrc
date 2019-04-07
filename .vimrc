@@ -544,6 +544,7 @@ let g:Gtags_Close_When_Single = 1  " close quickfix windows in case of single ta
 " (plugin) gtags-cscope
 "set tags=./tags,tags;$HOME
 set tags=./tags,tags;~
+set tagcase=match
 set cscopeprg=gtags-cscope
 "set cscopetag
 set cscopeverbose
