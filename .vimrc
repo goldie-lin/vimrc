@@ -380,7 +380,7 @@ function! g:committia_hooks.edit_open(info)
 
   " if no commit message, start with insert mode.
   if a:info.vcs ==# 'git' && getline(1) ==# ''
-      startinsert
+    startinsert
   end
 
   " scroll the diff window from insert mode.
