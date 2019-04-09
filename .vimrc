@@ -272,10 +272,8 @@ filetype plugin indent on
 " custom filetype remaps
 augroup custom_filetype_remappings
   autocmd BufNewFile,BufRead *.jsm      setlocal filetype=javascript
-  autocmd BufNewFile,BufRead *.rc       setlocal filetype=sh
   autocmd BufNewFile,BufRead *.aidl     setlocal filetype=java
   autocmd BufNewFile,BufRead *.[sS]     setlocal filetype=gas
-  autocmd BufRead,BufNewFile Android.bp setlocal filetype=bzl
 augroup END
 
 " Custom functions/scripts
