@@ -71,6 +71,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 Plug 'dzeban/vim-log-syntax'
 Plug 'thinca/vim-logcat'
+Plug 'rubberduck203/aosp-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Matt-Deacalion/vim-systemd-syntax'
 Plug 'fedorov7/vim-uefi', { 'for': [ 'uefi', 'uni', 'vfr', 'kss', 'inform', 'c.doxygen' ] }
