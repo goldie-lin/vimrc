@@ -154,6 +154,11 @@ set wildignore=CVS,.svn,.hg,.bzr,.git,.repo,*.o,*.a,*.class,*.pyc,*.mo,*.la,*.so
 " folding settings
 set foldmethod=marker  " [fdm] enable fold marker, i.e., '{{{' and '}}}'. (default: manual)
 
+" Enable patience diff
+if has('patch-8.1.0360')
+  set diffopt+=internal,algorithm:patience
+endif
+
 " try to enable 24bit true color if supported.
 if &term !~? 'rxvt'  " ignore unsupported terminals.
   if has('termguicolors') || has('patch-7.4.1778')
