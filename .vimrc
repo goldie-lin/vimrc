@@ -401,6 +401,12 @@ augroup vim_auto_open_quickfix_or_location_window_if_found_any_issue
   autocmd QuickFixCmdPost    l* nested lwindow
 augroup END
 
+" automatically close quickfix/location window if it's last one in the current tab
+augroup vim_auto_close_quickfix_or_location_window_if_it_is_last_one
+  autocmd!
+  autocmd WinEnter * if winnr('$') == 1 && &buftype == 'quickfix' | q | endif
+augroup END
+
 " toggle mouse mode
 function! ToggleMouseMode()
   if empty(&mouse)
