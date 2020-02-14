@@ -407,6 +407,12 @@ augroup vim_auto_close_quickfix_or_location_window_if_it_is_last_one
   autocmd WinEnter * if winnr('$') == 1 && &buftype == 'quickfix' | q | endif
 augroup END
 
+" automatically close quickfix/location window when buffer is closed
+augroup vim_auto_close_quickfix_or_location_window_when_buffer_is_closed
+  autocmd!
+  autocmd QuitPre * if empty(&buftype) | lclose | cclose | endif
+augroup END
+
 " toggle mouse mode
 function! ToggleMouseMode()
   if empty(&mouse)
