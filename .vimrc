@@ -79,6 +79,18 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'kergoth/vim-bitbake'
 call plug#end()
 
+" packadd - enable builtin optional plugins
+" =========================================
+
+packadd cfilter
+"packadd dvorak
+"packadd editexisting
+"packadd justify
+packadd matchit
+"packadd shellmenu
+"packadd swapmouse
+packadd termdebug
+
 " Vim encoding
 " ============
 
