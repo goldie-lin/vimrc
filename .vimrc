@@ -170,6 +170,11 @@ if has('patch-8.1.0360')
   set diffopt+=internal,algorithm:patience
 endif
 
+" Enable builtin search count (search index)
+if has('patch-8.1.1270')
+  set shortmess-=S
+endif
+
 " try to enable 24bit true color if supported.
 if &term !~? 'rxvt'  " ignore unsupported terminals.
   if has('termguicolors') || has('patch-7.4.1778')
