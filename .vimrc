@@ -206,6 +206,10 @@ if has('gui_running')  " GVim
     set guifont=Consolas:h12:cANSI
     colorscheme Tomorrow-Night-Eighties
   endif
+  set guioptions+=d  " enable dark theme (only works for GTK+)
+  set guioptions-=m  " disable GUI menubar
+  set guioptions-=T  " disable GUI toolbar
+  set guioptions-=e  " disable GUI tabline
 else  " (console) Vim
   let g:rehash256 = 1
   colorscheme molokai
