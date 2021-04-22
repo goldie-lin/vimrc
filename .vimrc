@@ -488,35 +488,41 @@ let g:cpp_experimental_template_highlight = 1
 delc PlugUpgrade  " Delete command, since I don't use it anymore.
 
 " (plugin) Lightline
-" Depend_and_integrate_with: Fugitive, Syntastic.
-set noshowmode  " do not show mode message on the last line
-let g:lightline = {
-  \ 'colorscheme': 'powerline',
-  \ 'active': {
+" Current_dependencies_integrated_with: fugitive, syntastic.
+set noshowmode  " Do not show ModeMsg on the last line.
+let g:lightline = {}
+let g:lightline.colorscheme = 'powerline'
+let g:lightline.active = {
   \   'left':  [ [ 'mode', 'paste' ],
   \              [ 'fugitive', 'readonly', 'filename', 'modified' ] ],
   \   'right': [ [ 'syntastic', 'lineinfo' ],
   \              [ 'percent' ],
-  \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
-  \ },
-  \ 'component': {
-  \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
-  \ },
-  \ 'component_visible_condition': {
-  \   'readonly': '(&filetype!="help"&& &readonly)',
-  \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-  \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-  \ },
-  \ 'component_expand': {
-  \   'syntastic': 'SyntasticStatuslineFlag',
-  \ },
-  \ 'component_type': {
-  \   'syntastic': 'error',
-  \ }
+  \              [ 'fileformat', 'fileencoding', 'filetype' ],
+  \              [ 'obsession' ] ],
   \ }
 let g:lightline.component = {
-  \ 'lineinfo': '%3l/%L:%-2v'
+  \   'lineinfo': '%3l/%L:%-2v',
+  \   'fugitive': '%{exists("*fugitive#head") ? fugitive#head() : ""}',
+  \   'obsession': '%{ObsessionStatus()}',
   \ }
+let g:lightline.component_function = {
+  \   'readonly': 'LightlineReadonly',
+  \ }
+let g:lightline.component_visible_condition = {
+  \   'readonly': '(&filetype != "help" && &readonly)',
+  \   'modified': '(&filetype != "help" && (&modified || ! &modifiable))',
+  \   'fugitive': '(exists("*fugitive#head") && "" != fugitive#head())',
+  \   'obsession': '1',
+  \ }
+let g:lightline.component_expand = {
+  \   'syntastic': 'SyntasticStatuslineFlag',
+  \ }
+let g:lightline.component_type = {
+  \   'syntastic': 'error',
+  \ }
+function! LightlineReadonly()
+  return &readonly && &filetype !=# 'help' ? 'RO' : ''
+endfunction
 
 " (plugin) Markdown
 let g:vim_markdown_initial_foldlevel = 1  " set initial foldlevel
