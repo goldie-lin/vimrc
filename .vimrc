@@ -498,11 +498,13 @@ let g:lightline.active = {
   \   'right': [ [ 'syntastic', 'lineinfo' ],
   \              [ 'percent' ],
   \              [ 'fileformat', 'fileencoding', 'filetype' ],
+  \              [ 'gitgutterstatus' ],
   \              [ 'obsession' ] ],
   \ }
 let g:lightline.component = {
   \   'lineinfo': '%3l/%L:%-2v',
   \   'fugitive': '%{exists("*fugitive#head") ? fugitive#head() : ""}',
+  \   'gitgutterstatus': '%{GitGutterStatus()}',
   \   'obsession': '%{ObsessionStatus()}',
   \ }
 let g:lightline.component_function = {
@@ -552,6 +554,10 @@ let g:grepper = {
 let g:gitgutter_max_signs = 1000  " (default: 500)
 let g:gitgutter_realtime = 0  " trade speed for accuracy
 let g:gitgutter_eager = 0  " trade speed for accuracy
+function! GitGutterStatus()
+  let [a,m,r] = GitGutterGetHunkSummary()
+  return printf('+%d ~%d -%d', a, m, r)
+endfunction
 
 " (plugin) Tagbar
 let g:tagbar_compact = 1  " omit short help at the top
